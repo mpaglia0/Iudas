@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}{{ 'Search results'|gettext(DEFAULT_LANG) }}{% endblock title %}
+
+{% block header %}
+    <!-- Page Header -->
+    {% if HEADER_COVER %}
+        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ HEADER_COVER }}')">
+    {% elif HEADER_COLOR %}
+        <header class="intro-header" style="background-color: {{ HEADER_COLOR }}">
+    {% else %}
+        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/home-bg.jpg')">
+    {% endif %}
+    {% block script %}
+    <script src="{{ SITEURL}}/tipuesearch_content.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch_set.js"></script>
+    {% assets filters="rjsmin", output="tipuesearch/tipuesearch.min.js", "tipuesearch/tipuesearch.js" %}
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.js"></script>
+    {% endassets %}
+    <script>
+      $(document).ready(function() {
+      $('#tipue_search_input').tipuesearch({
+         'show': 7,
+         'wholeWords': false
+      });
+    }); 
+    </script>
+    {% endblock script %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{ 'Search results'|gettext(DEFAULT_LANG) }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+{% block content %}
+<div id="tipue_search_content"></div>
+
+{% endblock content %}
+

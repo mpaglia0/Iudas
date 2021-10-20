@@ -1,0 +1,16 @@
+{% if DEFAULT_PAGINATION and articles_paginator.num_pages > 1 %}
+    <hr>
+    <!-- Pager -->
+    <ul class="pager">
+        <li class="next">
+            {% if articles_page.has_next() %}
+                <a href="{{ SITEURL }}/{{ articles_next_page.url }}">{{ 'Older Posts'|gettext(DEFAULT_LANG) }} <i class="fa fa-arrow-right"></i> </a>
+            {% endif %}
+            {% if articles_page.has_previous() %}
+                <a href="{{ SITEURL }}/{{ articles_previous_page.url }}"> <i class="fa fa-arrrow-left"></i> {{ 'Newest Posts'|gettext(DEFAULT_LANG) }}</a>
+            {% endif %}
+        </li>
+    </ul>
+    {{ 'Page'|gettext(DEFAULT_LANG) }} {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+    <hr>
+{% endif %}

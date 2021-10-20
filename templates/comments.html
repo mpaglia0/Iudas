@@ -1,0 +1,17 @@
+{% if article.metadata.static_comments %}
+        <section id="comments" class="body">
+           <h3>{{ 'Comments'|gettext(DEFAULT_LANG) }}</h3>
+        <hr>
+           {{ article.metadata.static_comments }}
+        <hr>
+           <h4>{{ 'You can leave a comment filling this form!'|gettext(DEFAULT_LANG) }}</h4>
+        <hr>
+           {% include 'comments_form.html' %}
+        </section>
+   {% else %}
+        <section id="comments" class="body">
+           <h4>{{ 'Would you like to be the first to leave a comment? I will be happy!'|gettext(DEFAULT_LANG) }}</h4>
+        <hr>
+           {% include 'comments_form.html' %}
+        </section>
+{% endif %}

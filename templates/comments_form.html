@@ -1,0 +1,42 @@
+<form name="sendComment" id="commentForm" action="send-comment.php" novalidate>
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+           <input type="hidden" id="title" name="title" value="{{ article.metadata.title }}" readonly>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+           <label for="name">{{ 'Name'|gettext(DEFAULT_LANG) }}</label><br>
+           <input type="text" class="form-control" id="name" name="name" placeholder="{{ 'Please enter your name'|gettext(DEFAULT_LANG) }}" required><br>
+           <small>{{ 'Mandatory'|gettext(DEFAULT_LANG) }}</small><br><br>
+           <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+           <label for="email">{{ 'Email'|gettext(DEFAULT_LANG) }}</label><br>
+           <input type="text" class="form-control" id="email" name="email" placeholder="{{ 'Please enter your email'|gettext(DEFAULT_LANG) }}"><br>
+           <small>{{ 'Optional'|gettext(DEFAULT_LANG) }}</small><br><br>
+           <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+           <label for="web">{{ 'Website'|gettext(DEFAULT_LANG) }}</label><br>
+           <input type="text" class="form-control" id="web" name="web" placeholder="{{ 'Please enter your website address'|gettext(DEFAULT_LANG) }}"><br>
+           <small>{{ 'Optional'|gettext(DEFAULT_LANG) }}</small><br><br>
+           <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+           <label for="msg">{{ 'Comment'|gettext(DEFAULT_LANG) }}</label><br>
+           <input type="text" class="form-control" id="msg" name="msg" placeholder="{{ 'Please enter your comment'|gettext(DEFAULT_LANG) }}" required><br>
+           <small>{{ 'Mandatory'|gettext(DEFAULT_LANG) }}</small><br><br>
+           <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <br>
+    <div id="success"></div>
+    <button type="submit" class="btn btn-primary" id="sendCommentButton">{{ 'Submit'|gettext(DEFAULT_LANG) }}</buton>
+</form>
