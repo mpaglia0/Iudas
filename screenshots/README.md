@@ -1,1 +1,1 @@
-Screenshots collection of a working Z installation
+Screenshots collection of a working **Z** installation
