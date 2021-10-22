@@ -2,12 +2,12 @@
 
 // Collect all variables coming from the contact module OR the comments form
 
-$name = strip_tags(htmlspecialchars($_POST['name']));             // comments AND contact
-$email_address = strip_tags(htmlspecialchars($_POST['email']));   // comments AND contact
-$subject = strip_tags(htmlspecialchars($_POST['subject']));       // contact
-$website = strip_tags(htmlspecialchars($_POST['website']));       // comments
-$title = strip_tags(htmlspecialchars($_POST['arttitle']));        // comments
-$message = strip_tags(htmlspecialchars($_POST['message']));       // comments AND contact
+$name = strip_tags(htmlspecialchars($_POST['name']));             // comments AND contact form
+$email_address = strip_tags(htmlspecialchars($_POST['email']));   // comments AND contact form
+$subject = strip_tags(htmlspecialchars($_POST['subject']));       // contact form
+$website = strip_tags(htmlspecialchars($_POST['website']));       // comments form
+$title = strip_tags(htmlspecialchars($_POST['arttitle']));        // comments form
+$message = strip_tags(htmlspecialchars($_POST['message']));       // comments AND contact form
 
 // Create the email and send the message
 
