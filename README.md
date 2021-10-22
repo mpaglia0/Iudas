@@ -12,7 +12,7 @@ Built with Bootstrap 4
 
 TODO
 
-## News and Improvements
+## Highlights
 
 ### Changed font
 
