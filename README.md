@@ -4,6 +4,8 @@ Based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-
 
 :warning: needs Pelican > ver. 4.0 (**ver. 4.7.1 ready**)
 
+HTML5 tags
+
 ## Screenshots
 
 TODO
