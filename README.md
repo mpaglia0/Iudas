@@ -2,7 +2,7 @@
 
 Based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
-:warning: works only with Pelican > ver. 4.0 (**ver. 4.7.1 ready**)
+:warning: needs Pelican > ver. 4.0 (**ver. 4.7.1 ready**)
 
 ## Screenshots
 
