@@ -6,6 +6,8 @@ Based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-
 
 HTML5 tags
 
+Built with Bootstrap 4
+
 ## Screenshots
 
 TODO
