@@ -1,4 +1,4 @@
-# Pelican **Z** Theme
+# **Z** (a Pelican theme)
 
 Based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
