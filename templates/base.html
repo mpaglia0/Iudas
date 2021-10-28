@@ -1,11 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ DEFAULT_LANG }}">
 
 <head>
     {% block head %}
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- jQuery -->
+         {% assets filters="rjsmin", output="js/jquery-3.6.0.min.js", "js/jquery-3.6.0.js" %}
+         <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+         {% endassets %}
+
+        <!-- Bootstrap Core JavaScript -->
+        {% assets filters="rjsmin", output="js/bootstrap.bundle.min.js", "js/bootstrap.bundle.js" %}
+        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+        {% endassets %}
+
+        <!-- FontAwesome Support -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Bootstrap Core CSS -->
+        {% assets filters="cssmin", output="css/bootstrap.min.css", "css/bootstrap.css" %}
+        <link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet">
+        {% endassets %}
+
+        <!-- Tipue-search CSS -->
+        {% assets filters="cssmin", output="tipuesearch/tipuesearch.min.css", "tipuesearch/tipuesearch.css" %}
+        <link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet">
+        {% endassets %}
+
+        <!-- Z style CSS -->
+        {% assets filters="cssmin", output="css/Z.min.css", "css/Z.css" %}
+        <link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet">
+        {% endassets %}
+
+        <!-- Code highlight color scheme -->
+        {% if COLOR_SCHEME_CSS %}
+            <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/code_blocks/{{ COLOR_SCHEME_CSS }}" rel="stylesheet">
+        {% else %}
+            <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/code_blocks/darkly.css" rel="stylesheet">
+        {% endif %}
+
+        {% if CSS_OVERRIDE %}
+            <!-- CSS specified by the user -->
+            <link href="{{ SITEURL }}/{{ CSS_OVERRIDE }}" rel="stylesheet">
+        {% endif %}
+
 
         {% if GOOGLE_SITE_VERIFICATION %}
             <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}">
@@ -44,47 +84,7 @@
             <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(slug=tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
     {% endfor %}
-        <!-- Bootstrap Core CSS -->
-        {% assets filters="cssmin", output="css/bootstrap.min.css", "css/bootstrap.css" %}
-        <link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet">
-        {% endassets %}
-        
-        <!-- Tipue-search CSS -->
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.css" rel="stylesheet">
-        
-        <!-- Z style CSS -->
-        {% assets filters="cssmin", output="css/Z.min.css", "css/Z.css" %}
-        <link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet">
-        {% endassets %}
 
-        <!-- Code highlight color scheme -->
-        {% if COLOR_SCHEME_CSS %}
-            <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/code_blocks/{{ COLOR_SCHEME_CSS }}" rel="stylesheet">
-        {% else %}
-            <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/code_blocks/darkly.css" rel="stylesheet">
-        {% endif %}
-
-        {% if CSS_OVERRIDE %}
-            <!-- CSS specified by the user -->
-            <link href="{{ SITEURL }}/{{ CSS_OVERRIDE }}" rel="stylesheet">
-        {% endif %}
-        
-         <!-- jQuery -->
-         {% assets filters="rjsmin", output="js/jquery.min.js", "js/jquery.js" %}
-         <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-         {% endassets %}
-         
-        <!-- Bootstrap Core JavaScript -->
-        {% assets filters="rjsmin", output="js/bootstrap.min.js", "js/bootstrap.js" %}
-        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-        {% endassets %}
-
-        <!-- FontAwesome Support -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-                
-        <!-- load normalize CSS -->
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/normalize.min.css">
-             
     {% endblock head %}
 
 	{% block opengraph %}
@@ -112,6 +112,7 @@
     {% if FAVICON %}
     <link rel="icon" href="/{{FAVICON}}">
     {% endif %}
+        {% include 'analytics.html' %}
 </head>
 
 {% if page %}
@@ -125,56 +126,46 @@
 {% endif %}
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">{{ 'Toggle navigation'|gettext(DEFAULT_LANG) }}</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ SITEURL }}/">{{ 'Home'|gettext(DEFAULT_LANG) }}</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    {% for title, link in MENUITEMS %}
-                        <li><a href="{{ link }}">{{ title }}</a></li>
-                    {% endfor %}
-            
+    <nav class="navbar navbar-expand-lg navbar-transparent">
+      <!-- Brand and toggle get grouped for better mobile display -->
+          {% if SITELOGO %}
+            <a class="navbar-brand" href="#"><img src="{{ SITELOGO }}" alt="Site logo"></a><a class="navbar-brand" href="{{ SITEURL }}/">{{ SITENAME }}</a>
+         {% else %}
+            <a class="navbar-brand" href="{{ SITEURL }}/">{{ SITENAME }}</a>
+         {% endif %}
+         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#NavbarCollapse" aria-controls="NavbarCollapse" aria-expanded="false" aria-label="{{ 'Toggle navigation'|gettext(DEFAULT_LANG) }}">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="NavbarCollapse">
+         <ul class="navbar-nav mr-auto">
+            {% for title, link in MENUITEMS %}
+               <li class="nav-item"><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
+            {% endfor %}
+            {% if DISPLAY_PAGES_ON_MENU %}
+               {% for p in pages %}
+                  <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+               {% endfor %}
+            {% else %}
+               {% if DISPLAY_CATEGORIES_ON_MENU %}
+                  {% for cat, null in categories %}
+                      <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                  {% endfor %}
+               {% endif %}
+            {% endif %}
+         </ul>
             {% block searchtop %}
-            <li>
-                <form id="searchform" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
-                    <svg viewBox="0 0 16 16" height='12' width='16' style='vertical-align: middle;'></svg>
-                    <input type="text" class="searchbox" name="q" id="tipue_search_input" placeholder="{{ 'Search'|gettext(DEFAULT_LANG) }}" autocomplete="off" required>
-                </form>
-            </li>
+            <form class="form-inline my-2 my-lg-0" id="searchform" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+               <svg viewBox="0 0 16 16" height='12' width='16' style='vertical-align: middle;'></svg>
+               <input type="search" class="form-control mr-sm-2" name="q" id="tipue_search_input" placeholder="{{ 'Search'|gettext(DEFAULT_LANG) }}" aria-label="{{ 'Search'|gettext(DEFAULT_LANG) }}" autocomplete="off" required/>
+            </form>
             {% endblock searchtop %}
-                        
-                    {% if DISPLAY_PAGES_ON_MENU %}
-                        {# FIXME: Simplify to 'for p in pages' when we are ready to drop support for Pelican < 3.7 #}
-                        {% for p in PAGES or pages %}
-                            <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-                        {% endfor %}
-                    {% else %}
-                        {% if DISPLAY_CATEGORIES_ON_MENU %}
-                            {% for cat, null in categories %}
-                                <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    {% endif %}
-                </ul>
-            </div>
+      </div>
             <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
     </nav>
 
     {% block header %}{% endblock header %}
-    
+
     <!-- Main Content -->
     <div class="container">
         <div class="row">
@@ -183,18 +174,18 @@
             </div>
         </div>
     </div>
-
-    <hr>
+    <!-- Code for display the home page -->
+    {% block landing %}{% endblock landing %}
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container" style="background-color:{{ HEADER_COLOR }}; padding-top:20px; padding-bottom:20px">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
                     {% if SOCIAL %}
                         {% for name,link in SOCIAL %}
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="{{ link }}">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
@@ -221,13 +212,12 @@
         <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
         {% endassets %}
     {% endif %}
-    
+
     <!-- Back-To-Top button -->
     {% if BACKTOTOP_BTN %}
     <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="{{ 'Click to return on top'|gettext(DEFAULT_LANG) }}" data-toggle="tooltip" data-placement="left"><span class="fa fa-arrow-up fa-2x"></span></a>
     {% endif %}
-    
-    {% include 'analytics.html' %}
+
 </body>
 
 </html>

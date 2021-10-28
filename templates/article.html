@@ -119,7 +119,7 @@
                             <span class="meta">{{ 'Updated on'|gettext(DEFAULT_LANG) }} {{ article.locale_modified }}</span>
                         {% endif %}
                         {% if article.readtime %}
-                            <span class="meta">{{ 'Read time, about'|gettext(DEFAULT_LANG) }} {{ article.readtime.minutes }} {{ 'minute(s)'|gettext(DEFAULT_LANG) }}</span>
+                            <span class="meta">{{ 'Read time, about'|gettext(DEFAULT_LANG) }} <i class="fa fa-clock-o"></i> {{ article.readtime.minutes }} {{ 'minute(s)'|gettext(DEFAULT_LANG) }}</span>
                         {% endif %}
                         {% import 'translations.html' as translations with context %}
                         {{ translations.translations_for(article) }}
@@ -135,35 +135,38 @@
     <article>
         {{ article.content }}
     </article>
-    <hr>
+
     {% if article.tags %}
+    <hr>
         <div class="tags">
-            <p>{{ 'tags:'|gettext(DEFAULT_LANG) }} {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+            <p><i class="fa fa-tags">{{ 'tags:'|gettext(DEFAULT_LANG) }} {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</i></p>
         </div>
     {% endif %}
-    
+
     <!-- Activated by Pelican Series plugin -->
     {% if article.series %}
     <hr>
     <p>{{ 'This post is part'|gettext(DEFAULT_LANG) }} <strong>[ {{ article.series.index }} ]</strong> {{ 'of series'|gettext(DEFAULT_LANG) }}: <strong>"{{ article.series.name }}"</strong></p>
-    <ul class="pager">
+    <ul class="pager" style="list-style: none;">
         <li class="next">
-            {% if article.series.next %}
-            <a href="{{ SITEURL }}/{{ article.series.next.url }}">{{ 'Next part'|gettext(DEFAULT_LANG) }} <i class="fa fa-arrow-right"></i> </a>
-            {% endif %}
-            {% if article.series.index != 1 %}
-            <a href="{{ SITEURL }}/la-bolla-la-storia-di-tommaso">{{ 'Go to index'|gettext(DEFAULT_LANG) }} <i class="fa fa-arrow-up"></i> </a>
-            {% endif %}
             {% if article.series.previous %}
             <a href="{{ SITEURL }}/{{ article.series.previous.url }}"> <i class="fa fa-arrow-left"></i> {{ 'Previous part'|gettext(DEFAULT_LANG) }}</a>
             {% endif %}
+            {% if article.series.index != 1 %}
+            <a href="{{ SITEURL }}/la-bolla-la-storia-di-teo">{{ 'Go to index'|gettext(DEFAULT_LANG) }} <i class="fa fa-arrow-up"></i> </a>
+            {% endif %}
+            {% if article.series.next %}
+            <a href="{{ SITEURL }}/{{ article.series.next.url }}">{{ 'Next part'|gettext(DEFAULT_LANG) }} <i class="fa fa-arrow-right"></i> </a>
+            {% endif %}
+
+
         </li>
     </ul>
     {% endif %}
-    
+
     {% include 'sharing.html' %}
     <hr>
-    {% if STATIC_COMMENTS_PLS and article.status != "draft" %}
+    {% if STATIC_COMMENTS_PLUS and article.status != "draft" %}
       {% include 'comments.html' %}
     {% endif %}
 {% endblock content %}
