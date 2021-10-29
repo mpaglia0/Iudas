@@ -210,6 +210,12 @@ CC_LICENSE = False
 # IGNORE_FILES = [FOOTER_INCLUDE]
 # THEME_TEMPLATES_OVERRIDE = [os.path.dirname(__file__)]
 
+# This section let you select colors in order to override Z standard CSS colors.
+# Any CSS valid properties cna be used
+ACCENTS_COLOR = red
+BUTTONS_BG = #000
+BUTTONS_TX = #ffffff
+
 # Set a common header for all contents
 # If you do not specify a different image or
 # color on each page, this one will be used
