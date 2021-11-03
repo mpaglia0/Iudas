@@ -1,36 +1,32 @@
-<form name="sendContact" id="contactForm" action="send-message.php" novalidate>
-    </div>
-    <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-           <label for="name">{{ 'Name'|gettext(DEFAULT_LANG) }}</label><br>
+<form name="sendContact" id="contactForm" action="send-message.php" class="needs-validation" novalidate>
+    <div class="mb-3">
+           <label for="name" class="form-label">{{ 'Name'|gettext(DEFAULT_LANG) }}</label><br>
            <input type="text" class="form-control" id="name" name="name" placeholder="{{ 'Please enter your name'|gettext(DEFAULT_LANG) }}" required><br>
            <small>{{ 'Required'|gettext(DEFAULT_LANG) }}</small><br><br>
-           <p class="help-block text-danger"></p>
-        </div>
+           <div class="invalid-feedback">
+               Questo è un campo obbligatorio...
+           </div>
     </div>
-    <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-           <label for="email">{{ 'Email'|gettext(DEFAULT_LANG) }}</label><br>
-           <input type="text" class="form-control" id="email" name="email" placeholder="{{ 'Please enter your email'|gettext(DEFAULT_LANG) }}"><br>
+    <div class="mb-3">
+           <label for="email" class="form-label">{{ 'Email'|gettext(DEFAULT_LANG) }}</label><br>
+           <input type="email" class="form-control" id="email" name="email" placeholder="{{ 'Please enter your email'|gettext(DEFAULT_LANG) }}"><br>
            <small>{{ 'Required'|gettext(DEFAULT_LANG) }}</small><br><br>
-           <p class="help-block text-danger"></p>
-        </div>
+           <div class="invalid-feedback">
+               Questo è un campo obbligatorio...
+           </div>
     </div>
-    <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-           <label for="subj">{{ 'Subject'|gettext(DEFAULT_LANG) }}</label><br>
+    <div class="mb-3">
+           <label for="subj" class="form-label">{{ 'Subject'|gettext(DEFAULT_LANG) }}</label><br>
            <input type="text" class="form-control" id="subj" name="subj" placeholder="{{ 'Please enter a short and clear subject'|gettext(DEFAULT_LANG) }}"><br>
            <small>{{ 'Optional'|gettext(DEFAULT_LANG) }}</small><br><br>
-           <p class="help-block text-danger"></p>
-        </div>
     </div>
-    <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-           <label for="msg">{{ 'Message'|gettext(DEFAULT_LANG) }}</label><br>
+    <div class="mb-3">
+           <label for="msg" class="form-label">{{ 'Message'|gettext(DEFAULT_LANG) }}</label><br>
            <input type="text" class="form-control" id="msg" name="msg" placeholder="{{ 'Please enter your message'|gettext(DEFAULT_LANG) }}" required><br>
            <small>{{ 'Required'|gettext(DEFAULT_LANG) }}</small><br><br>
-           <p class="help-block text-danger"></p>
-        </div>
+           <div class="invalid-feedback">
+               Questo è un campo obbligatorio...
+           </div>
     </div>
     <br>
     <div id="success"></div>
