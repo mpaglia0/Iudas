@@ -33,3 +33,45 @@ else {
 }
 
 ?>
+
+
+
+
+
+
+
+<?php
+// (A) UTF-8 MAIL FUNCTION
+function umail ($mailTo, $mailCc, $mailBcc, $mailSubject, $mailBody) {
+  // (A1) MAIL TO
+  if (is_array($mailTo)) { $mailTo = implode(", ", $mailTo); }
+
+  // (A2) MAIL HEADERS
+  $mailHead = [
+    "MIME-Version: 1.0",
+    "Content-type: text/html; charset=utf-8"
+  ];
+
+  // (A3) ADD CC & BCC
+  if ($mailCc !== null) {
+    if (is_array($mailCc)) { $mailCc = implode(", ", $mailCc); }
+    $mailHead[] = "Cc: $mailCc";
+  }
+  if ($mailBcc !== null) {
+    if (is_array($mailBcc)) { $mailBcc = implode(", ", $mailBcc); }
+    $mailHead[] = "Bcc: $mailBcc";
+  }
+
+  // (A4) SEND MAIL
+  return mail($mailTo, $mailSubject, $mailBody, implode("\r\n", $mailHead));
+}
+
+// (B) SEND TEST MAIL
+echo umail (
+  "job@doe.com", // TO
+  ["joe@doe.com", "jon@doe.com"], // CC
+  ["jon@doe.com", "joy@doe.com"], // BCC
+  "Test Email", // SUBJECT
+  "<html><body>This is <strong>強い</strong>.</body></html>", // BODY
+) ? "OK" : "ERROR";
+
