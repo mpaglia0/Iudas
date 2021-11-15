@@ -8,7 +8,11 @@ HTML5 tags
 
 Built with Bootstrap 5
 
-jQuery is no more needed.
+Bootstrap css and js build from sources at compile time
+
+Bootstrap icons
+
+No jQuery dependencies
 
 ## Screenshots
 
@@ -38,7 +42,7 @@ More information about how to configure your template are available on the plugi
 
 ### Webnsite Search
 
-[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
+[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is no more an active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
 ### Static Comments Plus
 
@@ -100,7 +104,7 @@ If you plan to use a Contact Module and you think to add its relevant icon among
 SOCIAL = (('mail', 'https://your-domain/your-contact-module'))
 ```
 
-If you have more links add them to SOCIAL. The Name has to be the name of the corresponding FontAwesome icon.
+If you have more links add them to SOCIAL. The Name has to be the name of the corresponding Bootstrap icon.
 If ``SHOW_SOCIAL_ON_INDEX_PAGE_HEADER`` is set to ``True`` social icons will be
 shown under site sub-title on the index page.
 
@@ -133,7 +137,7 @@ so authors pages are not created on build, and then
 SINGLE_AUTHOR_SAVE_AS = 'your-static-presentation-page/index.html'
 ```
 
-in order to build a single static page.
+in order to build a single static page dedicated to the author.
 
 ### Back-To-Top button
 
@@ -271,7 +275,7 @@ Minification with Webasset comes fully configured. For more information you can 
 
 ### Translation for templates strings
 
-A gettext method has been used. This is useful if you have only a few strings to be translated (like for templates).
+A gettext method has been used. This is useful if you have only a few strings to be translated (it is the case for templates).
 
 At the bottom of your ``pelicanconf.py`` file enter the following instruction:
 
