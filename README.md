@@ -6,7 +6,9 @@ Based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-
 
 HTML5 tags
 
-Built with Bootstrap 4
+Built with Bootstrap 5
+
+jQuery is no more needed.
 
 ## Screenshots
 
@@ -34,9 +36,9 @@ More information about how to configure your template are available on the plugi
 
 ![Screenshot](plugin_series.jpg)
 
-### Tipue Search
+### Webnsite Search
 
-[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) **v7.1** has been integrated into the theme.
+[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
 ### Static Comments Plus
 
@@ -135,7 +137,7 @@ in order to build a single static page.
 
 ### Back-To-Top button
 
-A simple/themeable back-to-top button is available.
+A simple/themeable back-to-top button is available (WIP).
 
 Set ``BACKTOTOP_BTN`` to ``True`` in order to enable it.
 
@@ -171,6 +173,8 @@ CSS_OVERRIDE = 'enter/your/path/myblog.css'
 
 Set ``DISABLE_CUSTOM_THEME_JAVASCRIPT`` to ``True`` if you want to disable
 ``js/Z.js`` in case you see strange/unexpected behaviour scattered along the site.
+
+(TODO - reduce theme JavaScript to the very minimum!)
 
 :warning: disabling theme JavaScript can cause other unexpected issues!
 
@@ -248,6 +252,8 @@ EXTRA_PATH_METADATA = {
 Minfication of CSS and JavaScripts is managed with the Webasset plugin, so this is a **REQUIRED** plugin.
 
 Minification with Webasset comes fully configured. For more information you can visit the [plugin repo](https://github.com/pelican-plugins/webassets) or the [webasset documentation](https://webassets.readthedocs.io/en/latest/index.html).
+
+(TODO - include Bootstrap SASS and JavaScript compile from source!)
 
 ### Other configuration parameters
 
