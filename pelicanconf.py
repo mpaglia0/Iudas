@@ -9,8 +9,9 @@ sys.path.append(os.curdir)
 AUTHOR = 'your_name'
 SITENAME = 'your_website_name'
 SITESUBTITLE = 'fill_me_if_you_like'
-#SITEURL = 'https://www.your-domain.com' # uncomment when ready to go in production!
-SITEURL='' # leave blank while developing
+# Leave blank (like the example here below) while developing.
+# Add SITEURL='https://www.your-site.com' in publishconf.py
+SITEURL=''
 
 # Path of source (ReST/Markdown) files
 PATH = 'content'
