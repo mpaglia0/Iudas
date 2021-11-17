@@ -14,6 +14,8 @@ Bootstrap icons
 
 No jQuery dependencies
 
+:warning: Internet Explorer is no more supported in any of its versions!
+
 ## Screenshots
 
 TODO
