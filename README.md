@@ -46,6 +46,8 @@ More information about how to configure your template are available on the plugi
 
 [**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is no more active so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
+(TODPO) Try the new search Pelican plugin developed with Stork
+
 ### Static Comments Plus
 
 **For ethical/privacy reasons DISQUS comment system has been removed**.
