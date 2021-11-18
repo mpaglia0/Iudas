@@ -2,11 +2,11 @@
 
 Initially based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
-:warning: needs Pelican > ver. 4.0 (**tested untill ver. 4.7.1**)
+:warning: needs [Pelican](https://blog.getpelican.com/) > ver. 4.0 (**tested untill ver. 4.7.1**)
 
 HTML5 tags
 
-Designed with Bootstrap 5
+Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
 Bootstrap CSS and JS build from Sass sources at compile time
 
