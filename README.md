@@ -10,7 +10,7 @@ HTML5 tags
 
 Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
-Bootstrap CSS build from Sass sources at compile time
+Customized Bootstrap CSS build from Sass sources at compile time
 
 Bootstrap icons
 
