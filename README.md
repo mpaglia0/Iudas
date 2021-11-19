@@ -1,14 +1,16 @@
 # This is **Z** (a Pelican theme)
 
-Initially based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
+Based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
 :warning: needs [Pelican](https://blog.getpelican.com/) > ver. 4.0 (**tested untill ver. 4.7.1**)
+
+## Some details...
 
 HTML5 tags
 
 Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
-Bootstrap CSS and JS build from Sass sources at compile time
+Bootstrap CSS build from Sass sources at compile time
 
 Bootstrap icons
 
@@ -18,7 +20,11 @@ All main browsers versions are supported except Internet Explorer that is no mor
 
 ## Screenshots
 
-TODO
+### Article/Page
+
+### Contact form
+
+### Archives
 
 ## Highlights
 
@@ -68,7 +74,7 @@ A function that calculates and shows the approx. read time for articles has been
 
 # Basic theme configuration
 
-:warning: All following configurations are valid only for **Z** theme.
+:warning: All following configuration params are valid only for **Z** theme.
 
 All properties have to be entered in ``pelicanconf.py``.
 
