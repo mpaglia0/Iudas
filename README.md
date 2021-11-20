@@ -30,7 +30,7 @@ All main browsers versions are supported except Internet Explorer that is no mor
 
 ### Changed font
 
-Changed the original *Open Sans* font with a more modern, nice, readable *Fira Sans*.
+Changed the original *Open Sans* font with Bootstrap 5 native fonts.
 
 Needs a different font management? (WIP)
 
