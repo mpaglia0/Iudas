@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} - {{ 'Archives'|gettext(DEFAULT_LANG) }}{% endblock %}
+{% block title %}{{ SITENAME }} - {{ 'Auto Interviste'|gettext(DEFAULT_LANG) }}{% endblock %}
 
 {% block header %}
     <!-- Page Header -->
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>{{ 'Archives for dates'|gettext(DEFAULT_LANG) }}</h1>
+                        <h1>{{ 'Auto Interviste'|gettext(DEFAULT_LANG) }}</h1>
                     </div>
                 </div>
             </div>
@@ -58,3 +58,13 @@
   {% endfor %}
 </div>
 {% endblock content %}
+
+
+
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">An item</li>
+  <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+  <li class="list-group-item">A fourth item</li>
+  <li class="list-group-item">And a fifth one</li>
+</ul>
