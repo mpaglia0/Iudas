@@ -16,6 +16,8 @@ Bootstrap icons
 
 No jQuery dependencies
 
+CSS and JS files are served locally and no more via CDN
+
 All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
 ## Screenshots
