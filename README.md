@@ -50,7 +50,7 @@ More information about how to configure your template are available on the plugi
 
 ### Website Search
 
-[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is ano  more active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
+[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
 ### Static Comments Plus
 
