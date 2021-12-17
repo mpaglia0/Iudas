@@ -10,13 +10,11 @@ HTML5 tags
 
 Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
-Customized Bootstrap CSS build from Sass sources at compile time
+Customized Bootstrap CSS build from Sass sources at compile time and served locally (no more via CDN)
 
 Bootstrap icons
 
 No jQuery dependencies
-
-CSS and JS files are served locally and no more via CDN
 
 All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
@@ -33,8 +31,6 @@ All main browsers versions are supported except Internet Explorer that is no mor
 ### Changed font
 
 Changed the original *Open Sans* font with Bootstrap 5 native fonts.
-
-Needs a different font management? (WIP)
 
 ### Contact Form
 
@@ -54,9 +50,7 @@ More information about how to configure your template are available on the plugi
 
 ### Website Search
 
-[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is no more active so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
-
-(TODPO) Try the new search Pelican plugin developed with Stork
+[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is ano  more active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
 ### Static Comments Plus
 
@@ -155,9 +149,7 @@ in order to build a single static page dedicated to you.
 
 ### Back-To-Top button
 
-A simple/themeable back-to-top button is available (WIP).
-
-Set ``BACKTOTOP_BTN`` to ``True`` in order to enable it.
+This feature has been removed since ver. 2.0 of **Z**
 
 ### Code highlights
 
@@ -272,8 +264,6 @@ EXTRA_PATH_METADATA = {
 Minfication of CSS and JavaScripts is managed with the Webasset plugin, so this is a **REQUIRED** plugin.
 
 Minification with Webasset comes fully configured. For more information you can visit the [plugin repo](https://github.com/pelican-plugins/webassets) or the [webasset documentation](https://webassets.readthedocs.io/en/latest/index.html).
-
-(TODO - include Bootstrap SASS and JavaScript compile from source! Include GZIP compression?)
 
 ### Other configuration parameters
 
