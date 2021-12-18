@@ -134,7 +134,7 @@ PLUGINS = [
   'neighbors',
   'webassets',
   'tipue_search',
-  'static_comments_plus",
+  'static_comments_plus',
   'seo', # if you will use seo plugin, please keep it commented untill ready for website publication
   'sitemap',
   'readtime',
@@ -236,11 +236,8 @@ COLOR_SCHEME_CSS = 'darkly.css'
 # Customized CSS
 # CSS_OVERRIDE = 'assets/css/custom.css'
 
-# In case of display problems set this to 'True'
-DISABLE_CUSTOM_THEME_JAVASCRIPT = False
-
-# Show or hide the Back-To-Top button
-BACKTOTOP_BTN = True
+# If you desire to use your own JavaScript, turn it to False
+DISABLE_CUSTOM_THEME_JAVASCRIPT = True
 
 # Jinja config - Pelican 4
 JINJA_ENVIRONMENT = {
