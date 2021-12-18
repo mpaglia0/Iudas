@@ -22,9 +22,15 @@ All main browsers versions are supported except Internet Explorer that is no mor
 
 ### Article/Page
 
+![Screenshot](screenshots/page.jpg)
+
 ### Contact form
 
+![Screenshot](screenshots/contacts.jpg)
+
 ### Archives
+
+![Screenshot](screenshots/archives.jpg)
 
 ## Highlights
 
@@ -46,7 +52,7 @@ In order to use the [Series](https://github.com/pelican-plugins/series) plugin s
 
 More information about how to configure your template are available on the plugin repository.
 
-![Screenshot](plugin_series.jpg)
+![Screenshot](screenshots/series.jpg)
 
 ### Website Search
 
