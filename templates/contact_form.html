@@ -1,34 +1,24 @@
-<form name="sendContact" id="contactForm" action="send-message.php" class="needs-validation" novalidate>
-    <div class="mb-3">
-           <label for="name" class="form-label">{{ 'Name'|gettext(DEFAULT_LANG) }}</label><br>
-           <input type="text" class="form-control" id="name" name="name" placeholder="{{ 'Please enter your name'|gettext(DEFAULT_LANG) }}" required><br>
-           <small>{{ 'Required'|gettext(DEFAULT_LANG) }}</small><br><br>
-           <div class="invalid-feedback">
-               Questo è un campo obbligatorio...
-           </div>
-    </div>
-    <div class="mb-3">
-           <label for="email" class="form-label">{{ 'Email'|gettext(DEFAULT_LANG) }}</label><br>
-           <input type="email" class="form-control" id="email" name="email" placeholder="{{ 'Please enter your email'|gettext(DEFAULT_LANG) }}"><br>
-           <small>{{ 'Required'|gettext(DEFAULT_LANG) }}</small><br><br>
-           <div class="invalid-feedback">
-               Questo è un campo obbligatorio...
-           </div>
-    </div>
-    <div class="mb-3">
-           <label for="subj" class="form-label">{{ 'Subject'|gettext(DEFAULT_LANG) }}</label><br>
-           <input type="text" class="form-control" id="subj" name="subj" placeholder="{{ 'Please enter a short and clear subject'|gettext(DEFAULT_LANG) }}"><br>
-           <small>{{ 'Optional'|gettext(DEFAULT_LANG) }}</small><br><br>
-    </div>
-    <div class="mb-3">
-           <label for="msg" class="form-label">{{ 'Message'|gettext(DEFAULT_LANG) }}</label><br>
-           <input type="text" class="form-control" id="msg" name="msg" placeholder="{{ 'Please enter your message'|gettext(DEFAULT_LANG) }}" required><br>
-           <small>{{ 'Required'|gettext(DEFAULT_LANG) }}</small><br><br>
-           <div class="invalid-feedback">
-               Questo è un campo obbligatorio...
-           </div>
-    </div>
-    <br>
-    <div id="success"></div>
-    <button type="submit" class="btn btn-primary" id="sendMessageButton">{{ 'Submit'|gettext(DEFAULT_LANG) }}</buton>
+<hr class="medium text-dark"></hr>
+<form action="/theme/php/send-message.php" method="post">
+   <div class="mb-3">
+      <label>Nome</label>
+      <input required type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Inserisci qui il tuo nome" />
+      <div class="form-text">Richiesto</div>
+   </div>
+   <div class="mb-3">
+      <label>Email</label>
+      <input required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control form-control-lg" id="email" name="email" placeholder="Inserisci qui la tua email"/>
+      <div class="form-text">Richiesto</div>
+   </div>
+   <div class="mb-3">
+      <label>Oggetto</label>
+      <input type="text" class="form-control form-control-lg" id="subject" name="subject" placeholder="Usa un oggetto breve ma chiaro"/>
+      <div class="form-text">Facoltativo</div>
+   </div>
+   <div class="mb-3">
+      <label>Messaggio</label>
+      <textarea required class="form-control form-control-lg" id="message" name="message" style="height: 100px" placeholder="Scrivi qui il tuo messaggio"/></textarea>
+      <div class="form-text">Richiesto</div>
+   </div>
+   <button type="submit" class="btn btn-outline-primary">Invia</button>
 </form>

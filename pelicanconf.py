@@ -9,8 +9,9 @@ sys.path.append(os.curdir)
 AUTHOR = 'your_name'
 SITENAME = 'your_website_name'
 SITESUBTITLE = 'fill_me_if_you_like'
-#SITEURL = 'https://www.your-domain.com' # uncomment when ready to go in production!
-SITEURL='' # leave blank while developing
+# Leave blank (like the example here below) while developing.
+# Add SITEURL='https://www.your-site.com' in publishconf.py
+SITEURL=''
 
 # Path of source (ReST/Markdown) files
 PATH = 'content'
@@ -209,6 +210,12 @@ CC_LICENSE = False
 # FOOTER_INCLUDE = 'your_customized_footer.html'
 # IGNORE_FILES = [FOOTER_INCLUDE]
 # THEME_TEMPLATES_OVERRIDE = [os.path.dirname(__file__)]
+
+# This section let you select colors in order to override Z standard CSS colors.
+# Any CSS valid properties cna be used
+ACCENTS_COLOR = red
+BUTTONS_BG = #000
+BUTTONS_TX = #ffffff
 
 # Set a common header for all contents
 # If you do not specify a different image or

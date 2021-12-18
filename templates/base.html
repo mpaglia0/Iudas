@@ -4,33 +4,13 @@
 <head>
     {% block head %}
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- jQuery -->
-         {% assets filters="rjsmin", output="js/jquery-3.6.0.min.js", "js/jquery-3.6.0.js" %}
-         <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-         {% endassets %}
+        <!-- Bootstrap Icons Support -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-        <!-- Bootstrap Core JavaScript -->
-        {% assets filters="rjsmin", output="js/bootstrap.bundle.min.js", "js/bootstrap.bundle.js" %}
-        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-        {% endassets %}
-
-        <!-- FontAwesome Support -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-        <!-- Bootstrap Core CSS -->
-        {% assets filters="cssmin", output="css/bootstrap.min.css", "css/bootstrap.css" %}
-        <link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet">
-        {% endassets %}
-
-        <!-- Tipue-search CSS -->
-        {% assets filters="cssmin", output="tipuesearch/tipuesearch.min.css", "tipuesearch/tipuesearch.css" %}
-        <link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet">
-        {% endassets %}
-
-        <!-- Z style CSS -->
-        {% assets filters="cssmin", output="css/Z.min.css", "css/Z.css" %}
+        <!-- Compiled and minified Bootstrap CSS -->
+        {% assets filters="sass,cssmin", output="css/bootstrapz.min.css", "src-import/custom.scss" %}
         <link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet">
         {% endassets %}
 
@@ -68,7 +48,7 @@
         {% if FEED_ATOM %}
             <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
         {% endif %}
-        {% if FEED_RSS %}
+        {% if FEED_RSS %}__
             <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
         {% endif %}
         {% if CATEGORY_FEED_ATOM and category %}
@@ -126,19 +106,20 @@
 {% endif %}
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+ bg-dark fixed-top">
+      <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
           {% if SITELOGO %}
-            <a class="navbar-brand" href="#"><img src="{{ SITELOGO }}" alt="Site logo"></a><a class="navbar-brand" href="{{ SITEURL }}/">{{ SITENAME }}</a>
+            <a class="navbar-brand" href="{{ SITEURL }}"><img src="{{ SITELOGO }}" class="d-inline-block align-text-top" alt="Site logo">{{ SITENAME }}</a>
          {% else %}
             <a class="navbar-brand" href="{{ SITEURL }}/">{{ SITENAME }}</a>
          {% endif %}
-         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#NavbarCollapse" aria-controls="NavbarCollapse" aria-expanded="false" aria-label="{{ 'Toggle navigation'|gettext(DEFAULT_LANG) }}">
+         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#NavbarCollapse" aria-controls="NavbarCollapse" aria-expanded="false" aria-label="{{ 'Toggle navigation'|gettext(DEFAULT_LANG) }}">
             <span class="navbar-toggler-icon"></span>
          </button>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="NavbarCollapse">
-         <ul class="navbar-nav mr-auto">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             {% for title, link in MENUITEMS %}
                <li class="nav-item"><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
@@ -155,16 +136,20 @@
             {% endif %}
          </ul>
             {% block searchtop %}
-            <form class="form-inline my-2 my-lg-0" id="searchform" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
-               <svg viewBox="0 0 16 16" height='12' width='16' style='vertical-align: middle;'></svg>
-               <input type="search" class="form-control mr-sm-2" name="q" id="tipue_search_input" placeholder="{{ 'Search'|gettext(DEFAULT_LANG) }}" aria-label="{{ 'Search'|gettext(DEFAULT_LANG) }}" autocomplete="off" required/>
+            <form class="d-flex" id="searchform" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+               <div class="input-group">
+                  <div class="input-group-text"><i class="bi bi-search"></i></div>
+               <input type="text" class="form-control mr-sm-2" name="q" id="tipue_search_input" placeholder="{{ 'search'|gettext(DEFAULT_LANG) }}">
+               </div>
             </form>
+
             {% endblock searchtop %}
       </div>
             <!-- /.navbar-collapse -->
+            </div>
     </nav>
 
-    {% block header %}{% endblock header %}
+  {% block header %}{% endblock header %}
 
     <!-- Main Content -->
     <div class="container">
@@ -175,11 +160,13 @@
         </div>
     </div>
     <!-- Code for display the home page -->
-    {% block landing %}{% endblock landing %}
+{% block landing %}{% endblock landing %}
 
     <!-- Footer -->
-    <footer>
-        <div class="container" style="background-color:{{ HEADER_COLOR }}; padding-top:20px; padding-bottom:20px">
+
+    <footer class="margin-top-20">
+        <div class="container-fluid" style="background-color:{{ HEADER_COLOR }}; padding-top:20px; padding-bottom:20px">
+
             <div class="row" style="justify-content: space-around">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
@@ -187,9 +174,8 @@
                         {% for name,link in SOCIAL %}
                             <li class="list-inline-item">
                                 <a href="{{ link }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-{{ name|lower }} fa-stack-1x fa-inverse"></i>
+                                    <span>
+                                        <i class="bi bi-{{ name|lower }}" style="font-size: 2rem"></i>
                                     </span>
                                 </a>
                             </li>
@@ -206,6 +192,14 @@
         </div>
     </footer>
 
+<!-- Load Popper from CDN -->
+<!-- Popper is needed ONLY if you use Dropdowns, Tooltips and/or Popovers
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> -->
+
+<!-- Bootstrap Bundle JavaScripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
     {% if not DISABLE_CUSTOM_THEME_JAVASCRIPT %}
         <!-- Custom Theme JavaScript -->
         {% assets filters="rjsmin", output="js/Z.min.js", "js/Z.js" %}
@@ -213,9 +207,18 @@
         {% endassets %}
     {% endif %}
 
+        <script>
+        function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
     <!-- Back-To-Top button -->
     {% if BACKTOTOP_BTN %}
-    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="{{ 'Click to return on top'|gettext(DEFAULT_LANG) }}" data-toggle="tooltip" data-placement="left"><span class="fa fa-arrow-up fa-2x"></span></a>
+
+
+
     {% endif %}
 
 </body>

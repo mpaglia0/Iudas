@@ -100,26 +100,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1>{{ article.title|striptags }}</h1>
+                    <div class="post-heading text-light text-center">
+                        <h1 class="display-1">{{ article.title|striptags }}</h1>
                         {% if article.headline %}
                             <h3 class="subheading">{{ article.headline }}</h3>
                         {% endif %}
                         <span class="meta">{{ 'Posted by'|gettext(DEFAULT_LANG) }}
                             {% if SINGLE_AUTHOR_SAVE_AS %}
-                            <a href="{{ SITEURL }}/{{ SINGLE_AUTHOR_SAVE_AS }}">{{ AUTHOR }}</a>
+                            <a href="{{ SITEURL }}/{{ SINGLE_AUTHOR_SAVE_AS }}" class="text-decoration-none">{{ AUTHOR }}</a>
                             {% else %}
                             {% for author in article.authors %}
-                                <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                                <a href="{{ SITEURL }}/{{ author.url }}" class="text-decoration-none">{{ author }}</a>
                             {% endfor %}
                             {% endif %}
                              {{ 'on'|gettext(DEFAULT_LANG) }} {{ article.locale_date }}
-                        </span>
+                        </span><br>
                         {% if article.modified %}
-                            <span class="meta">{{ 'Updated on'|gettext(DEFAULT_LANG) }} {{ article.locale_modified }}</span>
+                            <span class="meta">{{ 'Updated on'|gettext(DEFAULT_LANG) }} {{ article.locale_modified }}</span><br>
                         {% endif %}
                         {% if article.readtime %}
-                            <span class="meta">{{ 'Read time, about'|gettext(DEFAULT_LANG) }} <i class="fa fa-clock-o"></i> {{ article.readtime.minutes }} {{ 'minute(s)'|gettext(DEFAULT_LANG) }}</span>
+                            <span class="meta">{{ 'Read time, about'|gettext(DEFAULT_LANG) }} <i class="bi-clock-history"></i> {{ article.readtime.minutes }} {{ 'minute(s)'|gettext(DEFAULT_LANG) }}</span>
                         {% endif %}
                         {% import 'translations.html' as translations with context %}
                         {{ translations.translations_for(article) }}
@@ -132,14 +132,14 @@
 
 {% block content %}
     <!-- Post Content -->
-    <article>
+    <article class="margin-top-20">
         {{ article.content }}
     </article>
 
     {% if article.tags %}
     <hr>
         <div class="tags">
-            <p><i class="fa fa-tags">{{ 'tags:'|gettext(DEFAULT_LANG) }} {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</i></p>
+            <p><i class="bi bi-tags-fill">{{ 'tags:'|gettext(DEFAULT_LANG) }} {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</i></p>
         </div>
     {% endif %}
 
@@ -150,13 +150,13 @@
     <ul class="pager" style="list-style: none;">
         <li class="next">
             {% if article.series.previous %}
-            <a href="{{ SITEURL }}/{{ article.series.previous.url }}"> <i class="fa fa-arrow-left"></i> {{ 'Previous part'|gettext(DEFAULT_LANG) }}</a>
+            <a class="btn btn-outline-primary" href="{{ SITEURL }}/{{ article.series.previous.url }}"> <i class="bi bi-arrow-left"></i> {{ 'Previous part'|gettext(DEFAULT_LANG) }}</a>
             {% endif %}
             {% if article.series.index != 1 %}
-            <a href="{{ SITEURL }}/la-bolla-la-storia-di-teo">{{ 'Go to index'|gettext(DEFAULT_LANG) }} <i class="fa fa-arrow-up"></i> </a>
+            <a class="btn btn-outline-primary" href="{{ SITEURL }}/la-bolla-la-storia-di-teo">{{ 'Go to index'|gettext(DEFAULT_LANG) }} <i class="bi-arrow-up"></i> </a>
             {% endif %}
             {% if article.series.next %}
-            <a href="{{ SITEURL }}/{{ article.series.next.url }}">{{ 'Next part'|gettext(DEFAULT_LANG) }} <i class="fa fa-arrow-right"></i> </a>
+            <a class="btn btn-outline-primary" href="{{ SITEURL }}/{{ article.series.next.url }}">{{ 'Next part'|gettext(DEFAULT_LANG) }} <i class="bi bi-arrow-right"></i> </a>
             {% endif %}
 
 

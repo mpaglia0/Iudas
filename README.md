@@ -1,22 +1,36 @@
-# **Z** (a Pelican theme)
+# This is **Z** (a Pelican theme)
 
 Based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
-:warning: needs Pelican > ver. 4.0 (**ver. 4.7.1 ready**)
+:warning: needs [Pelican](https://blog.getpelican.com/) > ver. 4.0 (**tested untill ver. 4.7.1**)
+
+## Some details...
 
 HTML5 tags
 
-Built with Bootstrap 4
+Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+
+Customized Bootstrap CSS build from Sass sources at compile time and served locally (no more via CDN)
+
+Bootstrap icons
+
+No jQuery dependencies
+
+All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
 ## Screenshots
 
-TODO
+### Article/Page
+
+### Contact form
+
+### Archives
 
 ## Highlights
 
 ### Changed font
 
-Changed the original *Open Sans* font with a more modern, nice, readable *Fira Sans*.
+Changed the original *Open Sans* font with Bootstrap 5 native fonts.
 
 ### Contact Form
 
@@ -24,7 +38,7 @@ A Contact Form template is available in the ```template``` directory.
 
 You can use it including the HTML code in a customized page.
 
-:warning: needs a PHP capable hosting!
+:warning: needs a PHP capable hosting! PHP code is available in the ```static```directory.
 
 ### Integration of Series plugin
 
@@ -34,9 +48,9 @@ More information about how to configure your template are available on the plugi
 
 ![Screenshot](plugin_series.jpg)
 
-### Tipue Search
+### Website Search
 
-[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) **v7.1** has been integrated into the theme.
+[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
 ### Static Comments Plus
 
@@ -46,9 +60,9 @@ More information about how to configure your template are available on the plugi
 
 - Added a ``STATIC_COMMENTS_SOURCE`` parameter in order to choose if comments have to be written in *Markdown* or *reST* format.
 
-- Added a PHP script that will allow visitors to send comments through a form instead of an email (like Static Comments do).
+- Added a PHP script (available in the ```static``` directory) that will allow visitors to send comments through a form instead of an email (like Static Comments do).
 
-:warning: Each article needs to have the ``slug`` metadata duly assigned in order to let the plugin works!
+:warning: Each article needs to have the ``slug`` metadata duly assigned in order to let this plugin works!
 
 ### Read time
 
@@ -56,13 +70,13 @@ A function that calculates and shows the approx. read time for articles has been
 
 # Basic theme configuration
 
-:warning: All following configurations are valid only for **Z** theme.
+:warning: All following configuration params are valid only for **Z** theme.
 
 All properties have to be entered in ``pelicanconf.py``.
 
-For your convenience, you can find a ``pelicanconf.py`` template in this repo. You can reference to it as a nice starting point.
+For your convenience, you can find a ``pelicanconf.py`` template in this repo. You can look here in order to have a good starting point.
 
-### Header Covers
+### Header image Covers
 
 To define custom header cover, set the property ``HEADER_COVER``:
 
@@ -78,11 +92,11 @@ To define a simple header background color, set the property ``HEADER_COLOR``:
 HEADER_COLOR = 'black'
 ```
 
-You can use any valid CSS color.
+You can use any valid CSS color definition.
 
 ### Social URLs
 
-Github, Twitter and other URLs set these properties:
+For Github, Twitter and other URLs set these properties:
 
 ```python
 SOCIAL = (('twitter', 'https://twitter.com/myprofile'),
@@ -98,14 +112,14 @@ If you plan to use a Contact Module and you think to add its relevant icon among
 SOCIAL = (('mail', 'https://your-domain/your-contact-module'))
 ```
 
-If you have more links add them to SOCIAL. The Name has to be the name of the corresponding FontAwesome icon.
+If you have more links add them to SOCIAL. The Name has to be the name of the corresponding Bootstrap icon.
 If ``SHOW_SOCIAL_ON_INDEX_PAGE_HEADER`` is set to ``True`` social icons will be
 shown under site sub-title on the index page.
 
 ### External feed URL
 
 You can specify an external feed URL (e.g. FeedBurner) in ``SOCIAL`` using the
-``rss`` or ``rss-square`` icons. The icon will be shown in the footer with the
+``rss`` or ``rss-fill`` icons. The icon will be shown in the footer with the
 rest of your ``SOCIAL`` accounts. A ``<link>`` tag for the external feed will be
 placed in ``<head>`` instead of the default Pelican feeds.
 
@@ -117,7 +131,7 @@ Clicking on each author name will redirected the visitor to a page containing al
 If you are the unique author of the blog, this behaviour causes a boring
 loop since all articles belong only to you...
 
-Set
+To avoid this set
 
 ```python
 AUTHOR_URL = ''
@@ -125,19 +139,17 @@ AUTHOR_SAVE_AS = ''
 AUTHORS_SAVE_AS = ''
 ```
 
-so authors pages are not created on build, and then
+so authors pages are not created on build time, and then
 
 ```python
 SINGLE_AUTHOR_SAVE_AS = 'your-static-presentation-page/index.html'
 ```
 
-in order to build a single static page.
+in order to build a single static page dedicated to you.
 
 ### Back-To-Top button
 
-A simple/themeable back-to-top button is available.
-
-Set ``BACKTOTOP_BTN`` to ``True`` in order to enable it.
+This feature has been removed since ver. 2.0 of **Z**
 
 ### Code highlights
 
@@ -161,7 +173,9 @@ COLOR_SCHEME_CSS = 'monokai.css'
 ### User defined CSS
 
 Define ``CSS_OVERRIDE`` to insert a user defined CSS file
-after theme CSS. Example:
+after theme CSS.
+
+Example:
 
 ```python
 CSS_OVERRIDE = 'enter/your/path/myblog.css'
@@ -171,6 +185,8 @@ CSS_OVERRIDE = 'enter/your/path/myblog.css'
 
 Set ``DISABLE_CUSTOM_THEME_JAVASCRIPT`` to ``True`` if you want to disable
 ``js/Z.js`` in case you see strange/unexpected behaviour scattered along the site.
+
+(TODO - reduce theme JavaScript to the very minimum!)
 
 :warning: disabling theme JavaScript can cause other unexpected issues!
 
@@ -216,7 +232,7 @@ Will return -> **2015 - 2021**
 
 ### Analytics
 
-**Removed Google and Gauges Analytics for ethical/privacy reasons**.
+**Removed Google Analytics for ethical/privacy reasons**.
 
 Kept only the free Matomo (aka Piwik) system.
 
@@ -252,7 +268,7 @@ Minification with Webasset comes fully configured. For more information you can 
 ### Other configuration parameters
 
  - If ``ADDTHIS_PUBID`` is defined, sharing buttons from AddThis will appear
- at the bottom of the article;
+ at the bottom of the article; (TODO - try to make this feature work together with addthis custom bar)
  - ``GOOGLE_SITE_VERIFICATION`` - Google site verification token;
  - ``BING_SITE_VERIFICATION`` - Bing site verification token;
  - Set ``SHOW_FULL_ARTICLE`` to ``True`` to show full article content on index.html
@@ -265,7 +281,7 @@ Minification with Webasset comes fully configured. For more information you can 
 
 ### Translation for templates strings
 
-A gettext method has been used. This is useful if you have only a few strings to be translated (like for templates).
+A gettext method has been used. This is enaugh if you have only a few strings to be translated (this is the case for templates).
 
 At the bottom of your ``pelicanconf.py`` file enter the following instruction:
 
@@ -287,7 +303,7 @@ def gettext(string, lang):
 }
 ```
 
-This method translates only template stings! Translating content is fully explained in Pelican documentation.
+:warning: This method translates only template stings! Translating content is fully explained in Pelican documentation.
 
 ### Articles in deep
 
@@ -298,8 +314,10 @@ This method translates only template stings! Translating content is fully explai
  otherwise ``header_cover``, ``HEADER_COVER`` or a default image is used.
  Twitter cards are automatically generated if the ``twitter`` icon is configured
  in ``SOCIAL``!
+ 
+Since OpenGraph images and Twitter images have different dimensions, and you do not want them to be cut by social engines, two templates are available in the ```static/image``` directory. (WIP) 
 
-All image paths are relative from the site root directory!
+All image paths are relative to the site root directory!
 
 You can also use absolute URLs for ``og_image`` and ``twitter_image``.
 

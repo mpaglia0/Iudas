@@ -1,5 +1,5 @@
 {% if article.status != "draft" %}
-{% if ADDTHIS_PUBID %}
+{% if SHOW_ADDTHIS %}
     <hr>
     <div class="sharing">
         <!-- AddThis Button BEGIN -->
@@ -16,7 +16,7 @@
             <a class="addthis_button_compact"></a>
             <a class="addthis_counter addthis_bubble_style"></a>
         </div>
-        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADDTHIS_PUBID }}"></script>
+        <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADDTHIS_PUBID }}"></script>
         <!-- AddThis Button END -->
     </div>
 {% endif %}

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block header %}
+
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     {% if HEADER_COVER %}
@@ -14,7 +15,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>{{ SITENAME }}</h1>
+                        <h1 class="display-1">{{ SITENAME }}</h1>
                         {% if SITESUBTITLE %}
                             <hr class="small">
                             <span class="subheading">{{ SITESUBTITLE }}</span>
@@ -24,8 +25,8 @@
                             {% for name,link in SOCIAL %}
                                 <li class="list-inline-item">
                                     <a href="{{ link }}">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-{{ name|lower }} fa-stack-1x fa-inverse"></i>
+                                        <span>
+                                            <i class="bi bi-{{ name|lower }}"></i>
                                         </span>
                                     </a>
                                 </li>
@@ -37,14 +38,15 @@
             </div><hr class="medium"><br>
         </div>
     </header>
+
 {% endblock header %}
 
 {% block content %}
 
    {% for article in articles_page.object_list %}
-        <div class="post-preview">
-            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="{{ 'Permalink to'|gettext(DEFAULT_LANG) }} {{ article.title|striptags }}">
-                <h2 class="post-title">{{ article.title }}</h2>
+        <div class="post-preview margin-top-20">
+            <a href="{{ SITEURL }}/{{ article.url }}" class="text-decoration-none" rel="bookmark" title="{{ 'Permalink to'|gettext(DEFAULT_LANG) }} {{ article.title|striptags }}">
+                <h2 class="post-title display-4">{{ article.title }}</h2>
             </a>
             {% if SHOW_FULL_ARTICLE %}
                {{ article.content }}
@@ -57,12 +59,12 @@
                   {% endif %}
                 </div>
             {% endif %}
-            <p class="post-meta"><i class="fa fa-bullhorn"> {{ 'Posted by'|gettext(DEFAULT_LANG) }}</i>
+            <p class="post-meta"><i class="bi bi-journal-check"> {{ 'Posted by'|gettext(DEFAULT_LANG) }}</i>
                 {% if SINGLE_AUTHOR_SAVE_AS %}
-                <a href="{{ SITEURL }}/{{ SINGLE_AUTHOR_SAVE_AS }}">{{ AUTHOR }}</a>
+                <a href="{{ SITEURL }}/{{ SINGLE_AUTHOR_SAVE_AS }}" class="text-decoration-none">{{ AUTHOR }}</a>
                 {% else %}
                 {% for author in article.authors %}
-                    <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                    <a href="{{ SITEURL }}/{{ author.url }}" class="text-decoration-none">{{ author }}</a>
                 {% endfor %}
                 {% endif %}
                  {{ 'on'|gettext(DEFAULT_LANG) }} {{ article.locale_date }}
@@ -72,4 +74,5 @@
     {% endfor %}
 
     {% include "pagination.html" %}
+
 {% endblock content %}
