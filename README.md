@@ -58,6 +58,8 @@ More information about how to configure your template are available on the plugi
 
 [**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
+![Screenshot](screenshots/search.jpg)
+
 ### Static Comments Plus
 
 **For ethical/privacy reasons DISQUS comment system has been removed**.
@@ -70,9 +72,13 @@ More information about how to configure your template are available on the plugi
 
 :warning: Each article needs to have the ``slug`` metadata duly assigned in order to let this plugin works!
 
+![Screenshot](screenshots/comments.jpg)
+
 ### Read time
 
 A function that calculates and shows the approx. read time for articles has been added using the [Readtime](https://github.com/getpelican/pelican-plugins/tree/master/readtime) plugin.
+
+![Screenshot](screenshots/readtime.jpg)
 
 # Basic theme configuration
 
