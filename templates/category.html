@@ -3,7 +3,7 @@
 {% block title %}{{ SITENAME }} - {{'Articles in the'|gettext(DEFAULT_LANG) }} {{ category }} {{ 'category'|gettext(DEFAULT_LANG) }}{% endblock %}
 
 {% block header %}
-    <!-- Page Header -->
+
     {% if HEADER_COVER %}
         <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ HEADER_COVER }}')">
     {% elif HEADER_COLOR %}
@@ -14,11 +14,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1>{{'Articles in the'|gettext(DEFAULT_LANG) }} {{ category }} {{ 'category'|gettext(DEFAULT_LANG) }}</h1>
+                    <div class="page-heading text-light text-center">
+                        <h3 class="display-3">{{'Articles in'|gettext(DEFAULT_LANG) }}:</h3><h1 class="display-1" style="text-transform:uppercase;">{{ category }}
+                        </h1>
+                        <hr class="medium"></hr>
+                        <h2 class="display-3">{{ SITENAME }}</h2>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
 {% endblock header %}
