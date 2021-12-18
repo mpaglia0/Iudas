@@ -193,14 +193,13 @@ Example:
 CSS_OVERRIDE = 'enter/your/path/myblog.css'
 ```
 
-### Disable theme JavaScript
+### Customized theme JavaScript
 
-Set ``DISABLE_CUSTOM_THEME_JAVASCRIPT`` to ``True`` if you want to disable
-``js/Z.js`` in case you see strange/unexpected behaviour scattered along the site.
+Set ``DISABLE_CUSTOM_THEME_JAVASCRIPT`` to ``False`` if you want to use
+your own JavaScript.
 
-(TODO - reduce theme JavaScript to the very minimum!)
-
-:warning: disabling theme JavaScript can cause other unexpected issues!
+Starting from **Z ver. 2.0** ``Z.js`` has been completely removed but this feature
+has been kept in order to let you use your own JavaScript (if needed).
 
 ### User defined footer
 
