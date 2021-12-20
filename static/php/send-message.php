@@ -11,21 +11,23 @@ $message = strip_tags(htmlspecialchars($_POST['message']));       // comments AN
 
 // Create the email and send the message
 
+// If the field 'website' is empty so it means this is a new contact
 if(empty($website)) {
-   $to = 'info@mauriziopaglia.it';
-   $email_subject = "Nuovo Contatto";
-   $email_body = "Hai ricevuto un nuovo messaggio!\n\n"."Ecco i dettagli:\n\nNome: $name\n\nEmail: $email_address\n\nOggetto: $subject\n\nMessaggio:\n$message";
+   $to = 'your@email.here';
+   $email_subject = "New Contact";
+   $email_body = "You received a new message!\n\n"."Here below the details:\n\nName: $name\n\nEmail: $email_address\n\nSubject: $subject\n\nMessage:\n$message";
    mail($to, $email_subject, $email_body);
-   header('Location: /grazie.html');
+   header('Location: /thank_you_page.html');
 return true;
 }
 
+// If the field 'subject' is empty so it means this is a new comment 
 elseif(empty($subject)) {
-   $to = 'info@mauriziopaglia.it';
-   $email_subject = "Nuovo Commento";
-   $email_body = "Hai ricevuto un nuovo commento!.\n\n"."Ecco i dettagli:\n\nNome: $name\n\nEmail: $email_address\n\nTitolo articolo: $title\n\nSito web: $website\n\nMessaggio:\n$message";
+   $to = 'your@email.here';
+   $email_subject = "New Comment";
+   $email_body = "You received a new comment!.\n\n"."Here below the details:\n\nName: $name\n\nEmail: $email_address\n\nArticle title: $title\n\nWebsite: $website\n\nMessage:\n$message";
    mail($to,$email_subject,$email_body);
-   header('Location: /grazie.html');
+   header('Location: /thank_you_page.html');
 return true;
 }
 
