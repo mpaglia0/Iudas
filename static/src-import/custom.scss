@@ -63,6 +63,8 @@ $input-focus-bg: #fae7c0 //background color of activated fields
 @import "../bootstrap/scss/utilities/api"
 
 // Add additional custom code here
+body
+  padding-top: 50px
 // Helpers
 .margin-top-10
   padding-top: 10px
