@@ -57,7 +57,7 @@ $input-focus-bg: #fae7c0 //background color of activated fields
 //@import "../bootstrap/scss/placeholders"
 
 // Include helpers
-//@import "../bootstrap/scss/helpers"
+@import "../bootstrap/scss/helpers"
 
 // Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../bootstrap/scss/utilities/api"
