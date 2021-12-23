@@ -44,7 +44,7 @@ A Contact Form template is available in the ```template``` directory.
 
 You can use it including the HTML code in a customized page.
 
-:warning: needs a PHP capable hosting! PHP code is available in the ```static```directory.
+:warning: needs a PHP capable hosting! PHP code is available in the ```static``` directory.
 
 ### Integration of Series plugin
 
@@ -68,7 +68,7 @@ More information about how to configure your template are available on the plugi
 
 - Added a ``STATIC_COMMENTS_SOURCE`` parameter in order to choose if comments have to be written in *Markdown* or *reST* format.
 
-- Added a PHP script (available in the ```static``` directory) that will allow visitors to send comments through a form instead of an email (like Static Comments do).
+- Added a PHP script (available in the ```static``` directory) that will allow visitors to send comments through the form (Static Comments needs you send the comment by email).
 
 :warning: Each article needs to have the ``slug`` metadata duly assigned in order to let this plugin works!
 
@@ -82,11 +82,11 @@ A function that calculates and shows the approx. read time for articles has been
 
 # Basic theme configuration
 
-:warning: All following configuration params are valid only for **Z** theme.
+:warning: All following configuration parameters are valid only for **Z** theme.
 
 All properties have to be entered in ``pelicanconf.py``.
 
-For your convenience, you can find a ``pelicanconf.py`` template in this repo. You can look here in order to have a good starting point.
+For your convenience, you can find a ``pelicanconf.py`` template in this repo. You can look here in order to have a nice starting point.
 
 ### Header image Covers
 
@@ -124,7 +124,7 @@ If you plan to use a Contact Module and you think to add its relevant icon among
 SOCIAL = (('mail', 'https://your-domain/your-contact-module'))
 ```
 
-If you have more links add them to SOCIAL. The Name has to be the name of the corresponding Bootstrap icon.
+If you have more links add them to SOCIAL. The 'Name' has to be the name of the corresponding Bootstrap icon.
 If ``SHOW_SOCIAL_ON_INDEX_PAGE_HEADER`` is set to ``True`` social icons will be
 shown under site sub-title on the index page.
 
@@ -140,8 +140,7 @@ placed in ``<head>`` instead of the default Pelican feeds.
 Pelican has been designed for a multi-author site.
 
 Clicking on each author name will redirected the visitor to a page containing all articles published by the selected author.
-If you are the unique author of the blog, this behaviour causes a boring
-loop since all articles belong only to you...
+If you only write on your own blog, this behaviour causes a boring loop since all articles belong, obviously, only to you...
 
 To avoid this set
 
@@ -161,7 +160,7 @@ in order to build a single static page dedicated to you.
 
 ### Back-To-Top button
 
-This feature has been removed since ver. 2.0 of **Z**
+This feature has been removed since ver. 2.0 of **Z** that now uses a more comfortable fixed-top menu bar.
 
 ### Code highlights
 
@@ -184,8 +183,7 @@ COLOR_SCHEME_CSS = 'monokai.css'
 
 ### User defined CSS
 
-Define ``CSS_OVERRIDE`` to insert a user defined CSS file
-after theme CSS.
+Define ``CSS_OVERRIDE`` to insert a user defined CSS file after theme CSS.
 
 Example:
 
@@ -278,21 +276,17 @@ Minification with Webasset comes fully configured. For more information you can 
 
 ### Other configuration parameters
 
- - If ``ADDTHIS_PUBID`` is defined, sharing buttons from AddThis will appear
- at the bottom of the article; (TODO - try to make this feature work together with addthis custom bar)
+ - If ``ADDTHIS_PUBID`` is defined, sharing buttons from AddThis will appear at the bottom of the article;
  - ``GOOGLE_SITE_VERIFICATION`` - Google site verification token;
  - ``BING_SITE_VERIFICATION`` - Bing site verification token;
- - Set ``SHOW_FULL_ARTICLE`` to ``True`` to show full article content on index.html
- instead of summary;
- - Set ``SHOW_SITESUBTITLE_IN_HTML`` to ``True`` to make use of the ``SITESUBTITLE``
- variable inside the ``<title>`` HTML tag;
- - Set ``FACEBOOK_ADMINS`` to a list of Facebook account IDs which are
- associated with this blog. For example ``['12345']``. For more info see
+ - Set ``SHOW_FULL_ARTICLE`` to ``True`` to show full article content on index.html instead of summary;
+ - Set ``SHOW_SITESUBTITLE_IN_HTML`` to ``True`` to make use of the ``SITESUBTITLE`` variable inside the ``<title>`` HTML tag;
+ - Set ``FACEBOOK_ADMINS`` to a list of Facebook account IDs which are associated with this blog. For example ``['12345']``. For more info see
  https://developers.facebook.com/docs/platforminsights/domains
 
 ### Translation for templates strings
 
-A gettext method has been used. This is enaugh if you have only a few strings to be translated (this is the case for templates).
+A gettext method has been used. This is a good method if you have only a few strings to be translated (this is the case for templates).
 
 At the bottom of your ``pelicanconf.py`` file enter the following instruction:
 
@@ -318,15 +312,13 @@ def gettext(string, lang):
 
 ### Articles in deep
 
- - To customize header cover to articles, insert the metadata ``header_cover``.
- - To customize OpenGraph images, insert the metadata ``og_image``, otherwise
- ``header_cover``, ``HEADER_COVER`` or a default image is used.
- - To customize Twitter card images, insert the metadata ``twitter_image``,
- otherwise ``header_cover``, ``HEADER_COVER`` or a default image is used.
- Twitter cards are automatically generated if the ``twitter`` icon is configured
- in ``SOCIAL``!
+ - To customize header cover in articles, insert the metadata ``header_cover``.
+ - To customize OpenGraph images, insert the metadata ``og_image``, otherwise ``header_cover``, ``HEADER_COVER`` or a default image is used.
+ - To customize Twitter card images, insert the metadata ``twitter_image``, otherwise ``header_cover``, ``HEADER_COVER`` or a default image is used.
+
+Twitter cards are automatically generated if the ``twitter`` icon is configured in ``SOCIAL``!
  
-Since OpenGraph images and Twitter images have different dimensions, and you do not want them to be cut by social engines, two templates are available in the ```static/image``` directory. (WIP) 
+Since OpenGraph images and Twitter images have different dimensions, and you do not want them to be cut by social engines, two example templates are available in the ```static/image``` directory.
 
 All image paths are relative to the site root directory!
 
@@ -342,7 +334,7 @@ My title
 
 :date: 2010-10-03 10:20
 :modified: 2010-10-04 18:40
-:tags: thats, awesome
+:tags: tag1, tag2
 :category: yeah
 :slug: my-post
 :authors: Spiderman, Conan Doyle
@@ -359,7 +351,7 @@ Modified: 2010-12-05 19:30
 Category: Python
 Tags: pelican, publishing
 Slug: my-post
-Authors: Spiderman, Conan Doyle
+Author: Betty Boop
 Summary: Short version for index and feeds
 Headline: Resume of article
 
