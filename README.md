@@ -8,7 +8,7 @@ Based on [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-
 
 HTML5 tags
 
-Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) (Bootstrap version can be found in ```static/bootstrap``` folder)
 
 Customized Bootstrap CSS build from Sass sources at compile time and served locally (no more via CDN)
 
@@ -60,6 +60,8 @@ More information about how to configure your template are available on the plugi
 
 [**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
+:warning: don't be tricked by the fact the Pelican plugin is still called Tipue Search. The Pelican plugin simply produces an index (json) file that can work also for Lunr.js so you can go ahead and still use Tipue Search Pelican plugin!
+
 ![Screenshot](screenshots/search.jpg)
 
 ### Static Comments Plus
@@ -84,11 +86,9 @@ A function that calculates and shows the approx. read time for articles has been
 
 # Basic theme configuration
 
-:warning: All following configuration parameters are valid only for **Z** theme.
+### All following configuration parameters are valid only for **Z** theme.
 
-All properties have to be entered in ``pelicanconf.py``.
-
-For your convenience, you can find a ``pelicanconf.py`` template in this repo. You can look here in order to have a nice starting point.
+Properties have to be entered in ``pelicanconf.py``. For your convenience, you can find a ``pelicanconf.py`` template in this repo. You can look here in order to have a nice starting point.
 
 ### Header image Covers
 
