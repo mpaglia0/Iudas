@@ -60,7 +60,7 @@ More information about how to configure your template are available on the plugi
 
 [**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
-:warning: don't be tricked by the fact the Pelican plugin is still called Tipue Search. The Pelican plugin simply produces an index (json) file that can work also for Lunr.js so you can go ahead and still use Tipue Search Pelican plugin!
+:warning: Don't be tricked by the fact the Pelican plugin is still called Tipue Search. The Pelican plugin simply produces an index (json) file that can work also for Lunr.js so you can go ahead and still use Tipue Search Pelican plugin!
 
 ![Screenshot](screenshots/search.jpg)
 
