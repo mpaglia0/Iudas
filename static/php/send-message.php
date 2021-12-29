@@ -11,22 +11,30 @@ $message = strip_tags(htmlspecialchars($_POST['message']));       // comments AN
 
 // Create the email and send the message
 
-// If the field 'website' is empty so it means this is a new contact
 if(empty($website)) {
+   header('Content-type: text/html; charset=utf-8');
    $to = 'your@email.here';
    $email_subject = "New Contact";
-   $email_body = "You received a new message!\n\n"."Here below the details:\n\nName: $name\n\nEmail: $email_address\n\nSubject: $subject\n\nMessage:\n$message";
-   mail($to, $email_subject, $email_body);
+   $headers = 'Content-Type: text/plain; charset=utf-8' . "\r\n";
+   $headers .= 'Content-Transfer-Encoding: base64' . "\r\n";
+   $headers .= 'From: ' . $email_address;
+   $email_body = "You received a new message!\n\n"."Here below the details:\n\nName: $name\n\nSubject: $subject\n\nMessage:\n$message";
+   $body_encoded = base64_encode($email_body);
+   mail($to, $email_subject, $body_encoded, $headers);
    header('Location: /thank_you_page.html');
 return true;
 }
 
-// If the field 'subject' is empty so it means this is a new comment 
 elseif(empty($subject)) {
+   header('Content-type: text/html; charset=utf-8');
    $to = 'your@email.here';
    $email_subject = "New Comment";
-   $email_body = "You received a new comment!.\n\n"."Here below the details:\n\nName: $name\n\nEmail: $email_address\n\nArticle title: $title\n\nWebsite: $website\n\nMessage:\n$message";
-   mail($to,$email_subject,$email_body);
+   $headers = 'Content-Type: text/plain; charset=utf-8' . "\r\n";
+   $headers .= 'Content-Transfer-Encoding: base64' . "\r\n";
+   $headers .= 'From: ' . $email_address;
+   $email_body = "You received a new comment!.\n\n"."Here below the details:\n\nName: $name\n\nArticle title: $title\n\nWebsite: $website\n\nMessage:\n$message";
+   $body_encoded = base64_encode($email_body);
+   mail($to, $email_subject, $body_encoded, $headers);
    header('Location: /thank_you_page.html');
 return true;
 }
