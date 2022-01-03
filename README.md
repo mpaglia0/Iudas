@@ -46,8 +46,6 @@ You can use it including the HTML code in a customized page.
 
 :warning: needs a PHP capable hosting! PHP code is available in the ```static``` directory.
 
-TODO: update script with support for UTF-8 encoding
-
 ### Integration of Series plugin
 
 In order to use the [Series](https://github.com/pelican-plugins/series) plugin simply enter a ```:series:``` (reST) or ```Series:``` (Markdown) metadata in your article.
