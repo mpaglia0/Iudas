@@ -211,12 +211,6 @@ CC_LICENSE = False
 # IGNORE_FILES = [FOOTER_INCLUDE]
 # THEME_TEMPLATES_OVERRIDE = [os.path.dirname(__file__)]
 
-# This section let you select colors in order to override Z standard CSS colors.
-# Any CSS valid properties cna be used
-ACCENTS_COLOR = red
-BUTTONS_BG = #000
-BUTTONS_TX = #ffffff
-
 # Set a common header for all contents
 # If you do not specify a different image or
 # color on each page, this one will be used
@@ -236,8 +230,8 @@ COLOR_SCHEME_CSS = 'darkly.css'
 # Customized CSS
 # CSS_OVERRIDE = 'assets/css/custom.css'
 
-# If you desire to use your own JavaScript, turn it to False
-DISABLE_CUSTOM_THEME_JAVASCRIPT = True
+# If you desire to use your own JavaScript, turn it to True
+ENABLE_CUSTOM_THEME_JAVASCRIPT = False
 
 # Jinja config - Pelican 4
 JINJA_ENVIRONMENT = {
