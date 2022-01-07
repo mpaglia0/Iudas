@@ -200,13 +200,13 @@ In the ``base.html`` template scroll to the bottom of the page and find this pie
 
 ```python
 {% if ENABLE_CUSTOM_THEME_JAVASCRIPT %}
-        <!-- Custom Theme JavaScript -->
-        {% assets filters="rjsmin", output="js/your_own_javascript.min.js", "js/your_own_javascript.js" %}
-        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-        {% endassets %}
-    {% endif %}
+   <!-- Custom Theme JavaScript -->
+   {% assets filters="rjsmin", output="js/your_own_javascript.min.js", "js/your_own_javascript.js" %}
+      <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+   {% endassets %}
+{% endif %}
 ```
-and set the name of our own javascript.
+Set here the name of our own javascript and you are served.
 
 Starting from **Z ver. 2.0** ``Z.js`` has been completely removed but this feature
 has been kept in order to let you use your own JavaScript (if needed).
