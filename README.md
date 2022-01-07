@@ -135,7 +135,7 @@ You can specify an external feed URL (e.g. FeedBurner) in ``SOCIAL`` using the
 rest of your ``SOCIAL`` accounts. A ``<link>`` tag for the external feed will be
 placed in ``<head>`` instead of the default Pelican feeds.
 
-### Single author tweak
+### Single author
 
 Pelican has been designed for a multi-author site.
 
@@ -193,8 +193,20 @@ CSS_OVERRIDE = 'enter/your/path/myblog.css'
 
 ### Customized theme JavaScript
 
-Set ``DISABLE_CUSTOM_THEME_JAVASCRIPT`` to ``False`` if you want to use
+Set ``ENABLE_CUSTOM_THEME_JAVASCRIPT`` to ``True`` if you want to use
 your own JavaScript.
+
+In the ``base.html`` template scroll to the bottom of the page and find this piece of code
+
+```python
+{% if ENABLE_CUSTOM_THEME_JAVASCRIPT %}
+        <!-- Custom Theme JavaScript -->
+        {% assets filters="rjsmin", output="js/your_own_javascript.min.js", "js/your_own_javascript.js" %}
+        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+        {% endassets %}
+    {% endif %}
+```
+and set the name of our own javascript.
 
 Starting from **Z ver. 2.0** ``Z.js`` has been completely removed but this feature
 has been kept in order to let you use your own JavaScript (if needed).
