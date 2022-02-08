@@ -162,6 +162,7 @@ SITEMAP = {
 STATIC_COMMENTS_PLUS = True
 STATIC_COMMENTS_DIR = 'comments'
 STATIC_COMMENTS_SOURCE = 'RST'
+SHOW_COMMENTS = True #Set to False if you want to present comment area collapsed by default
 
 # Twitter auth info for social_media
 # fill with your Auth-keys and DO NOT share them!
