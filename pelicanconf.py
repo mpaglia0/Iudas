@@ -216,6 +216,11 @@ CC_LICENSE = False
 # If you do not specify a different image or
 # color on each page, this one will be used
 HEADER_COLOR = '#fafafa' # any CSS color is valid
+HEADER_COVER = 'images/standard_image_for_pages.jpg'
+# If set to TRUE you can load TWITTER_IMAGE on all pages/articles to be used as twitter:image
+# if set to False HEADER_COVER will be used
+FORCE_TWITTER_IMAGE = True
+TWITTER_IMAGE = 'images/specific_twitter_image.jpg'
 
 # Private key of AddThis
 ADDTHIS_PUBID = ''
