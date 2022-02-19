@@ -82,10 +82,14 @@
             <meta name="twitter:site" content="@{{ link|replace('http://', 'https://')|replace('https://twitter.com/', '') }}">
             <meta name="twitter:title" content="{{ SITENAME }}">
             <meta name="twitter:description" content="{{ SITESUBTITLE|default('View the blog.') }}">
-            {% if HEADER_COVER %}
-                <meta name="twitter:image" content="{{ SITEURL }}/{{ HEADER_COVER }}">
+            {% if FORCE_TWITTER_IMAGE %}
+                <meta name="twitter:image" content="{{ SITEURL }}/{{ TWITTER_IMAGE }}">
             {% else %}
-                <meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg">
+                {% if HEADER_COVER %}
+                    <meta name="twitter:image" content="{{ SITEURL }}/{{ HEADER_COVER }}">
+                {% else %}
+                    <meta name="twitter:image" content="{{ SITEURL }}/{{ TWITTER_IMAGE }}">
+                {% endif %}
             {% endif %}
         {% endfor %}
     {% endblock twitter_card %}
@@ -201,7 +205,7 @@
     {% if ENABLE_CUSTOM_THEME_JAVASCRIPT %}
         <!-- Custom Theme JavaScript -->
         {% assets filters="rjsmin", output="js/your_own_javascript.min.js", "js/your_own_javascript.js" %}
-        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+           <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
         {% endassets %}
     {% endif %}
 
