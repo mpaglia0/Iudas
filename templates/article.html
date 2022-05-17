@@ -142,7 +142,7 @@
     {% if article.tags %}
     <hr>
         <div class="tags">
-            <p><i class="bi bi-tags-fill">{{ 'tags:'|gettext(DEFAULT_LANG) }} {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</i></p>
+            <p><i class="bi bi-tags-fill"> {{ 'tags'|gettext(DEFAULT_LANG) }}: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</i></p>
         </div>
     {% endif %}
 
