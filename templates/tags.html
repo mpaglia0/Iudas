@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading text-light text-center">
-                        <h1 class="display-1">{{'Tags'|gettext(DEFAULT_DOC) }}</h1>
+                        <h1 class="display-1">{{'Tags'|gettext(DEFAULT_LANG) }}</h1>
                         <hr class="medium"></hr>
                         <h2 class="display-3">{{ SITENAME }}</h2>
                     </div>
@@ -29,7 +29,7 @@
 
 {% block content %}
 
-    <h1>{{'Tags for'|gettext(DEFAULT_DOC) }} {{ SITENAME }}</h1>
+    <h1>{{'Tags for'|gettext(DEFAULT_LANG) }} {{ SITENAME }}</h1>
     {%- for tag, articles in tags|sort %}
        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
     {% endfor %}
