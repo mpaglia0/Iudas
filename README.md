@@ -46,6 +46,8 @@ You can use it including the HTML code in a customized page.
 
 :warning: needs a PHP capable hosting! PHP code is available in the ```static``` directory.
 
+Starting from Z v2.03 the Contact Form includes a simple SPAM filter based on a honeypot trick.
+
 ### Integration of Series plugin
 
 In order to use the [Series](https://github.com/pelican-plugins/series) plugin simply enter a ```:series:``` (reST) or ```Series:``` (Markdown) metadata in your article.
@@ -73,6 +75,8 @@ More information about how to configure your template are available on the plugi
 - Added a PHP script (available in the ```static``` directory) that will allow visitors to send comments through the form (Static Comments needs you send the comment by email).
 
 :warning: Each article needs to have the ``slug`` metadata duly assigned in order to let this plugin works!
+
+Starting from Z v2.03 the Comment Form includes a simple SPAM filter based on a honeypot trick.
 
 ![Screenshot](screenshots/comments.jpg)
 
