@@ -156,7 +156,7 @@
             <a class="btn btn-outline-primary" href="{{ SITEURL }}/{{ article.series.previous.url }}"> <i class="bi bi-arrow-left"></i> {{ 'Previous part'|gettext(DEFAULT_LANG) }}</a>
             {% endif %}
             {% if article.series.index != 1 %}
-            <a class="btn btn-outline-primary" href="{{ SITEURL }}/la-bolla-la-storia-di-teo">{{ 'Go to index'|gettext(DEFAULT_LANG) }} <i class="bi-arrow-up"></i> </a>
+            <a class="btn btn-outline-primary" href="{{ SITEURL }}/{{ article.series.all_previous[0].url }}">{{ 'Go to index'|gettext(DEFAULT_LANG) }} <i class="bi-arrow-up"></i> </a>
             {% endif %}
             {% if article.series.next %}
             <a class="btn btn-outline-primary" href="{{ SITEURL }}/{{ article.series.next.url }}">{{ 'Next part'|gettext(DEFAULT_LANG) }} <i class="bi bi-arrow-right"></i> </a>
