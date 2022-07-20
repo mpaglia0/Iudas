@@ -144,7 +144,7 @@ placed in ``<head>`` instead of the default Pelican feeds.
 Pelican has been designed for a multi-author site.
 
 Clicking on each author name will redirected the visitor to a page containing all articles published by the selected author.
-If you only write on your own blog, this behaviour causes a boring loop since all articles belong, obviously, only to you...
+If you are the only one writing on your own blog, this behaviour causes a boring loop since all articles belong, obviously, only to you...
 
 To avoid this set
 
