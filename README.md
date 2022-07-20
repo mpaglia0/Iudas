@@ -259,6 +259,8 @@ Will return -> **2015 - 2021**
 
 **Removed Google Analytics for ethical/privacy reasons**.
 
+:warning: Google Analytics is now no more GDPR complaint!
+
 Kept only the free Matomo (aka Piwik) system.
 
  - Matomo: ``MATOMO_URL`` and ``MATOMO_SITE_ID``.
