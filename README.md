@@ -24,9 +24,17 @@ All main browsers versions are supported except Internet Explorer that is no mor
 
 ![Screenshot](screenshots/page.jpg)
 
+### Course/Lesson ###
+
+![Screenshot](screenshots/page.jpg) --> TODO
+
 ### Contact form
 
 ![Screenshot](screenshots/contacts.jpg)
+
+### Comments
+
+![Screenshot](screenshots/contacts.jpg) --> TODO
 
 ### Archives
 
@@ -85,6 +93,42 @@ Starting from Z v2.03 the Comment Form includes a simple SPAM filter based on a 
 A function that calculates and shows the approx. read time for articles has been added using the [Readtime](https://github.com/getpelican/pelican-plugins/tree/master/readtime) plugin.
 
 ![Screenshot](screenshots/readtime.jpg)
+
+### Courses/Lessons
+
+#THE BIG ONE!#
+
+Starting from **Z v.3.0** you can organize online courses/lessons!
+
+Base document is *article* (so you can have all plus of articles like read time and comments).
+
+An article can became a lesson adding the following metadata keys:
+
+reST
+
+```rst
+:course: <course_title>
+:series: <course_title>
+:series_index: <order_of_lessons_starting_from_1>
+```
+Markdown
+
+```markdown
+course: <course_title>
+series: <course_title>
+series_index: <order_of_lessons_starting_from_1>
+```
+Explanation:
+
+**Course**: simply tells Jinja2 this document is not a standard article but a course lesson. The content of this key is not [yet] managed but I suggest to put in it the name (title) of the course. If *course* is not empty Jinja2 will compile that page as a *lesson* instead of a normal *article* i.e.
+
+1. change navigation button labels from *chapter* into *lesson*
+
+2. builds an offcanvas index that will allow to quickly navigate among lessons
+
+**Series**: is used to actually manage the course/lessons (title, index, etc.)
+
+**Series_index**: since *Series* plugins orders items (lessons) using the creation date, it could happen you have to insert a lesson between two existing ones. In this case *creation dates* cannot be used since your latest lesson will be listed at the end of your index. To force the order you want, you can use the *series_index* key. Enter 1, 2, 3, etc. in each of your articles and *Series* will order items following numbers and not creation dates.
 
 # Basic theme configuration
 
@@ -342,7 +386,7 @@ You can also use absolute URLs for ``og_image`` and ``twitter_image``.
 
 Other metadata can be created to assign resume of article, with ``headline``:
 
- - To RST
+ - To reST
 
 ```rst
 My title
