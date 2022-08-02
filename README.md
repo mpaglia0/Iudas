@@ -26,7 +26,7 @@ All main browsers versions are supported except Internet Explorer that is no mor
 
 ### Course/Lesson ###
 
-![Screenshot](screenshots/page.jpg) --> TODO
+![Screenshot](screenshots/course.jpg)
 
 ### Contact form
 
@@ -34,7 +34,7 @@ All main browsers versions are supported except Internet Explorer that is no mor
 
 ### Comments
 
-![Screenshot](screenshots/contacts.jpg) --> TODO
+![Screenshot](screenshots/comments.jpg)
 
 ### Archives
 
@@ -86,7 +86,7 @@ More information about how to configure your template are available on the plugi
 
 Starting from Z v2.03 the Comment Form includes a simple SPAM filter based on a honeypot trick.
 
-![Screenshot](screenshots/comments.jpg)
+![Screenshot](screenshots/comment-form.jpg)
 
 ### Read time
 
