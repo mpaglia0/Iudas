@@ -1,4 +1,4 @@
-# This is **Z** (a Pelican theme)
+# This is **Z** (a privacy driven Pelican theme)
 
 Inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
@@ -8,7 +8,7 @@ Inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstr
 
 HTML5 tags
 
-Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) (Bootstrap exact version can be found in ```static/bootstrap``` folder)
+Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) (Bootstrap version can be found in ```static/bootstrap``` folder)
 
 Customized Bootstrap CSS build from Sass sources at compile time and served locally (no more via CDN)
 
