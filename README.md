@@ -1,6 +1,6 @@
-# This is **Z** (a privacy driven Pelican theme)
+# This is **Z** (a privacy focused Pelican theme)
 
-Inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
+Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
 :warning: needs [Pelican](https://blog.getpelican.com/) > ver. 4.0 (**tested untill ver. 4.8**)
 
@@ -66,9 +66,9 @@ More information about how to configure your template are available on the plugi
 
 ### Website Search
 
-[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
+[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so I have forked it and created [**Lunr-search**](https://github.com/mpaglia0/Lunr-search) a plugin that produces a JSON file suitable to be used with [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
-:warning: Don't be tricked by the fact the Pelican plugin is still called Tipue Search. The Pelican plugin simply produces an index (json) file that can work also for Lunr.js so you can go ahead and still use Tipue Search Pelican plugin!
+Lunr structure is all available inside the theme.
 
 ![Screenshot](screenshots/search.jpg)
 
@@ -93,6 +93,18 @@ Starting from Z v2.03 the Comment Form includes a simple SPAM filter based on a 
 A function that calculates and shows the approx. read time for articles has been added using the [Readtime](https://github.com/getpelican/pelican-plugins/tree/master/readtime) plugin.
 
 ![Screenshot](screenshots/readtime.jpg)
+
+### Share buttons
+
+**Removed AddThis for ethical/privacy reasons**.
+
+For privacy reason since Z v.3.0 the [AddThis](https://www.addthis.com/) service has been dropped in favour of the [**share-post**](https://github.com/pelican-plugins/share-post) plugin.
+
+In this occasion support for [share post on Mastodon](https://github.com/pelican-plugins/share-post/commit/89d1f123e8094245d11aaceb926ab05fffcac430) has been added to that plugin.
+
+### Post on Mastodon
+
+Always in view of more privacy and freedom a new plugin has been developed. It is called [**Pelican-toot**](https://github.com/mpaglia0/Pelican-toot) and will publish automatically new contents of your website on Mastodon.
 
 ### Courses/Lessons
 
@@ -165,10 +177,10 @@ SOCIAL = (('twitter', 'https://twitter.com/myprofile'),
           ('github', 'https://github.com/myprofile'),
           ('facebook','https://facebook.com/myprofile'),
           ('flickr','https://www.flickr.com/myprofile/'),
-	  ('mail','mailto:your@email.address'))
+    	  ('mail','mailto:your@email.address'))
 ```
 
-If you plan to use a Contact Module and you think to add its relevant icon among the Social ones, you could enter:
+If you plan to use the Contact Module and you think to add its relevant icon among the Social ones, you could enter:
 
 ```python
 SOCIAL = (('mail', 'https://your-domain/your-contact-module'))
@@ -210,7 +222,7 @@ in order to build a single static page dedicated to you.
 
 ### Back-To-Top button
 
-This feature has been removed since ver. 2.0 of **Z** that now uses a more comfortable fixed-top menu bar.
+This feature has been removed since ver. 2.0 of **Z** since now a more comfortable fixed-top menu bar is used.
 
 ### Code highlights
 
@@ -338,7 +350,7 @@ Minification with Webasset comes fully configured. For more information you can 
 
 ### Other configuration parameters
 
- - If ``ADDTHIS_PUBID`` is defined, sharing buttons from AddThis will appear at the bottom of the article;
+ - If ``SHOW_SHARE_BUTTONS`` is set to ``True``, sharing buttons will appear at the bottom of the article (needs [share-post](https://github.com/pelican-plugins/share-post) plugin);
  - ``GOOGLE_SITE_VERIFICATION`` - Google site verification token;
  - ``BING_SITE_VERIFICATION`` - Bing site verification token;
  - Set ``SHOW_FULL_ARTICLE`` to ``True`` to show full article content on index.html instead of summary;
@@ -350,7 +362,7 @@ Minification with Webasset comes fully configured. For more information you can 
 
 A gettext method has been used. This is a good method if you have only a few strings to be translated (this is the case for templates).
 
-At the bottom of your ``pelicanconf.py`` file enter the following instruction:
+Create a text file in your website root directory and rename it - for example - ``myfunctions.py`` and enter the following instruction:
 
 ```python
 # custom Jinja2 filter for localizing theme
@@ -360,13 +372,16 @@ def gettext(string, lang):
     elif lang == "it":
         if string == "Archives": return "Archivi"
         elif string == "Archives for": return "Archivi per"
-	elif string == "Posted by": return "Pubblicato da"
-	...
+	    elif string == "Posted by": return "Pubblicato da"
         ...
         else: return string
-        
- JINJA_FILTERS = {
-     "gettext": gettext,
+```
+Then call it at the end of your ``pelicanconf.py`` in this way:
+
+```python
+import myfunctions
+JINJA_FILTERS = {
+     'gettext': myfunctions.gettext,
 }
 ```
 
@@ -380,7 +395,7 @@ def gettext(string, lang):
 
 Twitter cards are automatically generated if the ``twitter`` icon is configured in ``SOCIAL``!
  
-Since OpenGraph images and Twitter images have different dimensions, and you do not want them to be cut by social engines, two example templates are available in the ```static/image``` directory.
+Since OpenGraph images and Twitter images have different dimensions, and you do not want them to be cut by social engines, two example templates are available in the ```static/images``` directory.
 
 All image paths are relative to the site root directory!
 
