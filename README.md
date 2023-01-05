@@ -16,6 +16,8 @@ Bootstrap icons
 
 No jQuery dependencies
 
+Content Security Policy [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) implemented.
+
 All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
 ## Screenshots
@@ -319,9 +321,11 @@ Will return -> **2015 - 2021**
 
 Kept only the free Matomo (aka Piwik) system.
 
- - Matomo: ``MATOMO_URL`` and ``MATOMO_SITE_ID``.
-
 :warning: needs new Matomo > 4.0
+
+ On ``publishconf.py`` set ``ACTIVATE_MATOMO`` to ``True``
+
+:warning: starting from Z 3.0 the Matomo integration has changed in order to be CSP compliant. The ``analytics.html`` page has been removed from ``templates`` and a ``matomo-tracking.js`` file has been added in ``static/js``.
 
 ### Favicon
 
