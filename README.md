@@ -6,19 +6,19 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 ## Some details...
 
-HTML5 tags
+- HTML5 tags
 
-Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) (Bootstrap version can be found in ``static/bootstrap`` folder)
+- Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) (Bootstrap version can be found in ``static/bootstrap`` folder)
 
-Customized Bootstrap CSS build from Sass sources at compile time and served locally (no more via CDN)
+- Customized Bootstrap CSS build from Sass sources at compile time and served locally (no more via CDN)
 
-Bootstrap icons
+- Bootstrap icons
 
-No jQuery dependencies
+. No jQuery dependencies
 
-Content Security Policy ([CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)) has been implemented.
+- Content Security Policy ([CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)) has been implemented.
 
-All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
+- All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
 ## More privacy. More security
 
