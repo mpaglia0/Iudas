@@ -2,7 +2,7 @@
 
 Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
-:warning: needs [Pelican](https://blog.getpelican.com/) > ver. 4.0 (**tested untill ver. 4.8**)
+:warning: **needs [Pelican](https://blog.getpelican.com/) > ver. 4.0** (*tested till ver. 4.8*)
 
 ## Some details...
 
@@ -60,17 +60,17 @@ Changed the original *Open Sans* font with Bootstrap 5 native fonts.
 
 ### Contact Form
 
-A Contact Form template is available in the ```template``` directory.
+A Contact Form template is available in the ``template`` directory.
 
 You can use it including the HTML code in a customized page.
 
-:warning: needs a PHP capable hosting! PHP code is available in the ```static``` directory.
+:warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory.
 
-Starting from Z v2.03 the Contact Form includes a simple SPAM filter based on a honeypot trick.
+Starting from **Z v2.03** the Contact Form includes a simple SPAM filter based on a honeypot trick.
 
 ### Integration of Series plugin
 
-In order to use the [Series](https://github.com/pelican-plugins/series) plugin simply enter a ```:series:``` (reST) or ```Series:``` (Markdown) metadata in your article.
+In order to use the [Series](https://github.com/pelican-plugins/series) plugin simply enter a ``:series:`` (reST) or ``Series:`` (Markdown) metadata in your article.
 
 More information about how to configure your template are available on the plugin repository.
 
@@ -92,11 +92,11 @@ Lunr structure is all available inside the theme.
 
 - Added a ``STATIC_COMMENTS_SOURCE`` parameter in order to choose if comments have to be written in *Markdown* or *reST* format.
 
-- Added a PHP script (available in the ```static``` directory) that will allow visitors to send comments through the form (Static Comments needs you send the comment by email).
+- Added a PHP script (available in the ``static`` directory) that will allow visitors to send comments through the form (Static Comments needs you send the comment by email).
 
 :warning: Each article needs to have the ``slug`` metadata duly assigned in order to let this plugin works!
 
-Starting from Z v2.03 the Comment Form includes a simple SPAM filter based on a honeypot trick.
+Starting from **Z v2.03** the Comment Form includes a simple SPAM filter based on a honeypot trick.
 
 ![Screenshot](screenshots/comment-form.jpg)
 
@@ -110,7 +110,7 @@ A function that calculates and shows the approx. read time for articles has been
 
 **Removed AddThis for ethical/privacy reasons**.
 
-For privacy reason since Z v.3.0 the [AddThis](https://www.addthis.com/) service has been dropped in favour of the [**share-post**](https://github.com/pelican-plugins/share-post) plugin.
+For privacy reason since **Z v3.0** the [AddThis](https://www.addthis.com/) service has been dropped in favour of the [**share-post**](https://github.com/pelican-plugins/share-post) plugin.
 
 In this occasion support for [share post on Mastodon](https://github.com/pelican-plugins/share-post/commit/89d1f123e8094245d11aaceb926ab05fffcac430) has been added to that plugin.
 
@@ -120,7 +120,7 @@ Always in view of more privacy and freedom a new plugin has been developed. It i
 
 ### Courses/Lessons
 
-Starting from **Z v.3.0** you can organize online courses/lessons!
+Starting from **Z v3.0** you can organize online courses/lessons!
 
 Base document is *article* (so you can have all plus of articles like read time and comments).
 
@@ -335,7 +335,7 @@ Kept only the free Matomo (aka Piwik) system.
 
  On ``publishconf.py`` set ``ACTIVATE_MATOMO`` to ``True``
 
-:warning: starting from Z 3.0 the Matomo integration has changed in order to be CSP compliant. The ``analytics.html`` page has been removed from ``templates`` and a ``matomo-tracking.js`` file has been added in ``static/js``.
+:warning: starting from **Z v3.0** the Matomo integration has changed in order to be CSP compliant. The ``analytics.html`` page has been removed from ``templates`` and a ``matomo-tracking.js`` file has been added in ``static/js``.
 
 ### Favicon
 
@@ -376,7 +376,7 @@ Minification with Webasset comes fully configured. For more information you can 
 
 A gettext method has been used. This is a good method if you have only a few strings to be translated (this is the case for templates).
 
-Create a text file in your website root directory and rename it - for example - ``myfunctions.py`` and enter the following instruction:
+Create a text file in your website root directory and rename it - for example - ``myfunctions.py``. Fill this file with the following instruction:
 
 ```python
 # custom Jinja2 filter for localizing theme
@@ -388,9 +388,10 @@ def gettext(string, lang):
         elif string == "Archives for": return "Archivi per"
 	    elif string == "Posted by": return "Pubblicato da"
         ...
+	...
         else: return string
 ```
-Then call it at the end of your ``pelicanconf.py`` in this way:
+Now you have to call it at the end of your ``pelicanconf.py`` in this way:
 
 ```python
 import myfunctions
@@ -417,7 +418,7 @@ You can also use absolute URLs for ``og_image`` and ``twitter_image``.
 
 Other metadata can be created to assign resume of article, with ``headline``:
 
- - To reST
+ - reST
 
 ```rst
 My title
@@ -433,7 +434,7 @@ My title
 :headline: Resume of article
 ```
 
- - To Markdown
+ - Markdown
 
 ```markdown
 Title: My title
@@ -449,6 +450,6 @@ Headline: Resume of article
 This is the content of my blog post.
 ```
 
-Feel free to use **Z** for your projects and send comments and/or suggestions.
+Feel free to use **Z** for your projects and to send comments and/or suggestions.
 
 Enjoy!
