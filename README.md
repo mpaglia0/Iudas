@@ -26,7 +26,9 @@ All main browsers versions are supported except Internet Explorer that is no mor
 
 Starting from **Z v.3.0** Security has been keep in great account also.
 
-In the repo you can find a sample of 
+In the repo you can find a sample of ``.htaccess`` with many suggestions about safe server configuration parameters.
+
+:warning: this file has to be considered as a simple suggestion only. NEVER apply any line of code if you do not know what you are exactly doing!
 
 ## Screenshots
 
