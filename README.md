@@ -20,6 +20,14 @@ Content Security Policy ([CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP
 
 All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
+## More privacy. More security
+
+**Z** is developed with Privacy as a main target.
+
+Starting from **Z v.3.0** Security has been keep in great account also.
+
+In the repo you can find a sample of 
+
 ## Screenshots
 
 ### Article/Page
