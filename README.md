@@ -14,7 +14,7 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 - Bootstrap icons
 
-. No jQuery dependencies
+- No jQuery dependencies
 
 - Content Security Policy ([CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)) has been implemented.
 
