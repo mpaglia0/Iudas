@@ -16,7 +16,7 @@ Bootstrap icons
 
 No jQuery dependencies
 
-Content Security Policy [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) implemented.
+Content Security Policy ([CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)) has been implemented.
 
 All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
