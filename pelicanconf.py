@@ -9,6 +9,7 @@ sys.path.append(os.curdir)
 AUTHOR = 'your_name'
 SITENAME = 'your_website_name'
 SITESUBTITLE = 'fill_me_if_you_like'
+# Regarding SITEURL.
 # Leave blank (like the example here below) while developing.
 # Add SITEURL='https://www.your-site.com' in publishconf.py
 SITEURL=''
@@ -20,8 +21,8 @@ DEFAULT_DATE = 'fs'
 DEFAULT_DATE_FORMAT = '%d/%m/%Y'
 TIMEZONE = 'UTC'
 
-DEFAULT_LANG = 'it'
-LOCALE = 'it_IT.UTF-8'
+DEFAULT_LANG = 'it' # Set it depending your own language
+LOCALE = 'it_IT.UTF-8' # Set it depending your own language
 
 # Adds some nice effects to text
 TYPOGRIFY = True
@@ -30,11 +31,9 @@ TYPOGRIFY = True
 SUMMARY_MAX_LENGTH = 50
 SUMMARY_END_SUFFIX = ' …'
 
-# web site statistics
-# Matomo > 4.0 needs your Matomo installation path
-# be written withour ant trailing/initial slash!
-MATOMO_SSL_URL = 'your-domain.com/matomo'
-MATOMO_SITE_ID = 1
+# Web site statistics
+# Matomo > 4.0. More information in js/matomo-tracking.js
+ACTIVATE_MATOMO = True
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -98,7 +97,7 @@ TAGS_SAVE_AS = 'tags.html'
 AUTHOR_URL = ''
 AUTHOR_SAVE_AS = ''
 AUTHORS_SAVE_AS = ''
-# This is a static author page
+# This is a single author page structure
 # it works only if above settings are BLANKS ('')
 SINGLE_AUTHOR_SAVE_AS = 'path_to_presentation/index.html'
 
@@ -133,14 +132,11 @@ PLUGIN_PATHS = [
 PLUGINS = [
   'neighbors',
   'webassets',
-  'tipue_search',
+  'lunr_search',
   'static_comments_plus',
-  'seo', # if you will use seo plugin, please keep it commented untill ready for website publication
   'sitemap',
   'readtime',
-  'pelican.plugins.series',
-  'pelican_tweet',
-  'pelican_youtube'
+  'pelican.plugins.series'
 ]
 
 # Sitemap
@@ -163,20 +159,6 @@ STATIC_COMMENTS_PLUS = True
 STATIC_COMMENTS_DIR = 'comments'
 STATIC_COMMENTS_SOURCE = 'RST'
 SHOW_COMMENTS = True #Set to False if you want to present comment area collapsed by default
-
-# Twitter auth info for social_media
-# fill with your Auth-keys and DO NOT share them!
-TWITTER_CONSUMER_KEY = ''
-TWITTER_CONSUMER_SECRET = ''
-TWITTER_ACCESS_TOKEN_KEY = ''
-TWITTER_ACCESS_TOKEN_SECRET = ''
-
-# SEO settings
-#SEO_REPORT = False
-SEO_ENHANCER = True
-SEO_ENHANCER_OPEN_GRAPH = True
-#SEO_ARTICLES_LIMIT = 999
-#SEO_PAGES_LIMIT = 999
 
 # Readtime
 READTIME_WPM = {
@@ -222,9 +204,6 @@ HEADER_COVER = 'images/standard_image_for_pages.jpg'
 FORCE_TWITTER_IMAGE = True
 TWITTER_IMAGE = 'images/specific_twitter_image.jpg'
 
-# Private key of AddThis
-ADDTHIS_PUBID = ''
-
 # Show social icons in footer
 SOCIAL = (('twitter', 'https://twitter.com/your_user'),
           ('github', 'https://github.com/your_user'),
@@ -249,21 +228,10 @@ JINJA_ENVIRONMENT = {
   ]
 }
 
-# custom Jinja2 filter for localizing theme
-def gettext(string, lang):
-    if lang == 'en':
-        return string
-    elif lang == 'it':
-      if string == 'Archives': return 'Archivi'
-      elif string == 'Archives for': return 'Archivi per'
-      elif string == 'Posted by': return 'Pubblicato da'
-      elif string == 'Updated on': return 'Aggiornato il'
-      elif string == 'Articles by': return 'Articoli di'
-      elif string == 'Authors': return 'Autori'
-      elif string == 'Categories': return 'Sezioni'
-      else: return string
-        
+# Custom Jinja2 filter for localizing theme
+# needs a myfunctions.py file in the root
+# directory of Pelican
+import myfunctions
 JINJA_FILTERS = {
-     'gettext': gettext,
-     'format': lambda x, *y, **z: x.format(*y, **z)
+     'gettext': myfunctions.gettext,
 }
