@@ -228,8 +228,8 @@ JINJA_ENVIRONMENT = {
   ]
 }
 
-# Custom Jinja2 filter for localizing theme
-# needs a myfunctions.py file in the root
+# Call the translated strings.
+# Needs a myfunctions.py file in the root
 # directory of Pelican
 import myfunctions
 JINJA_FILTERS = {
