@@ -1,10 +1,10 @@
- /*!
- * Lunr languages, `Italian` language
- * https://github.com/MihaiValentin/lunr-languages
- *
- * Copyright 2014, Mihai Valentin
- * http://www.mozilla.org/MPL/
- */
+/*!
+* Lunr languages, `Italian` language
+* https://github.com/MihaiValentin/lunr-languages
+*
+* Copyright 2014, Mihai Valentin
+* http://www.mozilla.org/MPL/
+*/
 /*!
  * based on
  * Snowball JavaScript Library v0.3
@@ -20,7 +20,7 @@
  * Export code from https://github.com/umdjs/umd/blob/master/returnExports.js
  */
 ;
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define(factory)
@@ -35,13 +35,13 @@
     // Browser globals (root is window)
     factory()(root.lunr);
   }
-}(this, function() {
+}(this, function () {
   /**
    * Just return a value to define the module export.
    * This example returns an object, but the module
    * can return a function as the exported value.
    */
-  return function(lunr) {
+  return function (lunr) {
     /* throw error if lunr is not yet included */
     if ('undefined' === typeof lunr) {
       throw new Error('Lunr non trovato!. Devi includere/chiamare Lunr PRIMA di questo script.');
@@ -53,7 +53,7 @@
     }
 
     /* register specific locale function */
-    lunr.it = function() {
+    lunr.it = function () {
       this.pipeline.reset();
       this.pipeline.add(
         lunr.it.trimmer,
@@ -77,18 +77,18 @@
     lunr.Pipeline.registerFunction(lunr.it.trimmer, 'trimmer-it');
 
     /* lunr stemmer function */
-    lunr.it.stemmer = (function() {
+    lunr.it.stemmer = (function () {
       /* create the wrapped stemmer object */
       var Among = lunr.stemmerSupport.Among,
         SnowballProgram = lunr.stemmerSupport.SnowballProgram,
         st = new function ItalianStemmer() {
           var a_0 = [new Among("", -1, 7), new Among("qu", 0, 6),
-              new Among("\u00E1", 0, 1), new Among("\u00E9", 0, 2),
-              new Among("\u00ED", 0, 3), new Among("\u00F3", 0, 4),
-              new Among("\u00FA", 0, 5)
-            ],
+          new Among("\u00E1", 0, 1), new Among("\u00E9", 0, 2),
+          new Among("\u00ED", 0, 3), new Among("\u00F3", 0, 4),
+          new Among("\u00FA", 0, 5)
+          ],
             a_1 = [new Among("", -1, 3),
-              new Among("I", 0, 1), new Among("U", 0, 2)
+            new Among("I", 0, 1), new Among("U", 0, 2)
             ],
             a_2 = [
               new Among("la", -1, -1), new Among("cela", 0, -1),
@@ -112,8 +112,8 @@
               new Among("velo", 31, -1)
             ],
             a_3 = [new Among("ando", -1, 1),
-              new Among("endo", -1, 1), new Among("ar", -1, 2),
-              new Among("er", -1, 2), new Among("ir", -1, 2)
+            new Among("endo", -1, 1), new Among("ar", -1, 2),
+            new Among("er", -1, 2), new Among("ir", -1, 2)
             ],
             a_4 = [
               new Among("ic", -1, -1), new Among("abil", -1, -1),
@@ -124,31 +124,31 @@
               new Among("iv", -1, 1)
             ],
             a_6 = [new Among("ica", -1, 1),
-              new Among("logia", -1, 3), new Among("osa", -1, 1),
-              new Among("ista", -1, 1), new Among("iva", -1, 9),
-              new Among("anza", -1, 1), new Among("enza", -1, 5),
-              new Among("ice", -1, 1), new Among("atrice", 7, 1),
-              new Among("iche", -1, 1), new Among("logie", -1, 3),
-              new Among("abile", -1, 1), new Among("ibile", -1, 1),
-              new Among("usione", -1, 4), new Among("azione", -1, 2),
-              new Among("uzione", -1, 4), new Among("atore", -1, 2),
-              new Among("ose", -1, 1), new Among("ante", -1, 1),
-              new Among("mente", -1, 1), new Among("amente", 19, 7),
-              new Among("iste", -1, 1), new Among("ive", -1, 9),
-              new Among("anze", -1, 1), new Among("enze", -1, 5),
-              new Among("ici", -1, 1), new Among("atrici", 25, 1),
-              new Among("ichi", -1, 1), new Among("abili", -1, 1),
-              new Among("ibili", -1, 1), new Among("ismi", -1, 1),
-              new Among("usioni", -1, 4), new Among("azioni", -1, 2),
-              new Among("uzioni", -1, 4), new Among("atori", -1, 2),
-              new Among("osi", -1, 1), new Among("anti", -1, 1),
-              new Among("amenti", -1, 6), new Among("imenti", -1, 6),
-              new Among("isti", -1, 1), new Among("ivi", -1, 9),
-              new Among("ico", -1, 1), new Among("ismo", -1, 1),
-              new Among("oso", -1, 1), new Among("amento", -1, 6),
-              new Among("imento", -1, 6), new Among("ivo", -1, 9),
-              new Among("it\u00E0", -1, 8), new Among("ist\u00E0", -1, 1),
-              new Among("ist\u00E8", -1, 1), new Among("ist\u00EC", -1, 1)
+            new Among("logia", -1, 3), new Among("osa", -1, 1),
+            new Among("ista", -1, 1), new Among("iva", -1, 9),
+            new Among("anza", -1, 1), new Among("enza", -1, 5),
+            new Among("ice", -1, 1), new Among("atrice", 7, 1),
+            new Among("iche", -1, 1), new Among("logie", -1, 3),
+            new Among("abile", -1, 1), new Among("ibile", -1, 1),
+            new Among("usione", -1, 4), new Among("azione", -1, 2),
+            new Among("uzione", -1, 4), new Among("atore", -1, 2),
+            new Among("ose", -1, 1), new Among("ante", -1, 1),
+            new Among("mente", -1, 1), new Among("amente", 19, 7),
+            new Among("iste", -1, 1), new Among("ive", -1, 9),
+            new Among("anze", -1, 1), new Among("enze", -1, 5),
+            new Among("ici", -1, 1), new Among("atrici", 25, 1),
+            new Among("ichi", -1, 1), new Among("abili", -1, 1),
+            new Among("ibili", -1, 1), new Among("ismi", -1, 1),
+            new Among("usioni", -1, 4), new Among("azioni", -1, 2),
+            new Among("uzioni", -1, 4), new Among("atori", -1, 2),
+            new Among("osi", -1, 1), new Among("anti", -1, 1),
+            new Among("amenti", -1, 6), new Among("imenti", -1, 6),
+            new Among("isti", -1, 1), new Among("ivi", -1, 9),
+            new Among("ico", -1, 1), new Among("ismo", -1, 1),
+            new Among("oso", -1, 1), new Among("amento", -1, 6),
+            new Among("imento", -1, 6), new Among("ivo", -1, 9),
+            new Among("it\u00E0", -1, 8), new Among("ist\u00E0", -1, 1),
+            new Among("ist\u00E8", -1, 1), new Among("ist\u00EC", -1, 1)
             ],
             a_7 = [
               new Among("isca", -1, 1), new Among("enda", -1, 1),
@@ -204,10 +204,10 @@
             ],
             g_CG = [17],
             I_p2, I_p1, I_pV, sbp = new SnowballProgram();
-          this.setCurrent = function(word) {
+          this.setCurrent = function (word) {
             sbp.setCurrent(word);
           };
-          this.getCurrent = function() {
+          this.getCurrent = function () {
             return sbp.getCurrent();
           };
 
@@ -570,7 +570,7 @@
                   sbp.slice_del();
             }
           }
-          this.stem = function() {
+          this.stem = function () {
             var v_1 = sbp.cursor;
             r_prelude();
             sbp.cursor = v_1;
@@ -592,10 +592,10 @@
         };
 
       /* and return a function that stems a word for the current locale */
-      return function(token) {
+      return function (token) {
         // for lunr version 2
         if (typeof token.update === "function") {
-          return token.update(function(word) {
+          return token.update(function (word) {
             st.setCurrent(word);
             st.stem();
             return st.getCurrent();
