@@ -1,0 +1,21 @@
+<button class="btn btn-outline-secondary mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-box-arrow-left"></i> {{ 'Show index'|gettext(DEFAULT_LANG) }}</button>
+<div class="offcanvas offcanvas-start bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+   <div class="offcanvas-header">
+     <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">{{ article.series.name }}</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+   </div>
+   <div class="offcanvas-body">
+     <ol class="nav nav-pills flex-column mb-auto">
+        {% for this_article in article.series.all %}
+            <li class="nav-item">
+            {% if this_article == article %}
+               <i class="bi bi-arrow-right-square-fill"></i>
+            {% else %}
+               <i class="bi bi-dash"></i>
+            {% endif %}
+                <a href='{{ SITEURL }}/{{ this_article.url }}' class="active" aria-current="page">{{ this_article.title }}</a>
+            </li>
+        {% endfor %}
+     </ol>
+   </div>
+</div>

@@ -1,23 +1,13 @@
-{% if article.status != "draft" %}
-{% if SHOW_ADDTHIS %}
-    <hr>
-    <div class="sharing">
-        <!-- AddThis Button BEGIN -->
-        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-            <a class="addthis_button_preferred_1"></a>
-            <a class="addthis_button_preferred_2"></a>
-            <a class="addthis_button_preferred_3"></a>
-            <a class="addthis_button_preferred_4"></a>
-            <a class="addthis_button_preferred_5"></a>
-            <a class="addthis_button_preferred_6"></a>
-            <a class="addthis_button_preferred_7"></a>
-            <a class="addthis_button_preferred_8"></a>
-            <a class="addthis_button_preferred_9"></a>
-            <a class="addthis_button_compact"></a>
-            <a class="addthis_counter addthis_bubble_style"></a>
-        </div>
-        <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADDTHIS_PUBID }}"></script>
-        <!-- AddThis Button END -->
-    </div>
-{% endif %}
-{% endif %}
+<hr>
+<div class="sharing">
+   {# Share buttons BEGIN #}
+   <div class="btn_container">
+      <a href="{{article.share_post['diaspora']}}" target="_blank" class="btn_share-dia"><i class="bi-asterisk"></i><span>Diaspora*</span></a>
+      <a href="{{article.share_post['twitter']}}" target="_blank" class="btn_share-tw"><i class="bi-twitter"></i><span>Twitter</span></a>
+      <a href="{{article.share_post['facebook']}}" target="_blank" class="btn_share-fb"><i class="bi-facebook"></i><span>Facebook</span></a>
+      <a href="{{article.share_post['reddit']}}" target="_blank" class="btn_share-red"><i class="bi-reddit"></i><span>Reddit</span></a>
+      <a href="{{article.share_post['mastodon']}}" target="_blank" class="btn_share-mas"><i class="bi-mastodon"></i><span>Mastodon</span></a>
+      <a href="{{article.share_post['email']}}" target="_blank" class="btn_share-eml"><i class="bi-envelope-fill"></i><span>Email</span></a>
+   </div>
+   {# Share buttons END #}
+</div>

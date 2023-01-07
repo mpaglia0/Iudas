@@ -1,22 +1,34 @@
-# This is **Z** (a Pelican theme)
+# This is **Z** (a privacy focused Pelican theme)
 
-Inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
+Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
-:warning: needs [Pelican](https://blog.getpelican.com/) > ver. 4.0 (**tested untill ver. 4.8**)
+:warning: **Needs [Pelican](https://blog.getpelican.com/) > ver. 4.0** (*tested till ver. 4.8*)
 
 ## Some details...
 
-HTML5 tags
+- HTML5 tags
 
-Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) (Bootstrap exact version can be found in ```static/bootstrap``` folder)
+- Designed with [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) (Bootstrap version can be found in ``static/bootstrap`` folder)
 
-Customized Bootstrap CSS build from Sass sources at compile time and served locally (no more via CDN)
+- Customized Bootstrap CSS build from Sass sources at compile time and served locally (no more via CDN)
 
-Bootstrap icons
+- Bootstrap icons
 
-No jQuery dependencies
+- No jQuery dependencies
 
-All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
+- Content Security Policy ([CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)) has been implemented.
+
+- All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
+
+## More privacy, more security
+
+**Z** is developed with Privacy as a main target.
+
+Starting from **Z v.3.0** Security has been keep in great account also.
+
+In the repo you can find a sample of ``.htaccess`` with many suggestions about safe server configuration parameters.
+
+:warning: This file has to be considered as a simple suggestion only. NEVER apply any line of code if you do not know what you are exactly doing!
 
 ## Screenshots
 
@@ -24,9 +36,17 @@ All main browsers versions are supported except Internet Explorer that is no mor
 
 ![Screenshot](screenshots/page.jpg)
 
+### Course/Lesson ###
+
+![Screenshot](screenshots/course.jpg)
+
 ### Contact form
 
 ![Screenshot](screenshots/contacts.jpg)
+
+### Comments
+
+![Screenshot](screenshots/comments.jpg)
 
 ### Archives
 
@@ -40,17 +60,17 @@ Changed the original *Open Sans* font with Bootstrap 5 native fonts.
 
 ### Contact Form
 
-A Contact Form template is available in the ```template``` directory.
+A Contact Form template is available in the ``template`` directory.
 
 You can use it including the HTML code in a customized page.
 
-:warning: needs a PHP capable hosting! PHP code is available in the ```static``` directory.
+:warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory.
 
-Starting from Z v2.03 the Contact Form includes a simple SPAM filter based on a honeypot trick.
+Starting from **Z v2.03** the Contact Form includes a simple SPAM filter based on a honeypot trick.
 
 ### Integration of Series plugin
 
-In order to use the [Series](https://github.com/pelican-plugins/series) plugin simply enter a ```:series:``` (reST) or ```Series:``` (Markdown) metadata in your article.
+In order to use the [Series](https://github.com/pelican-plugins/series) plugin simply enter a ``:series:`` (reST) or ``Series:`` (Markdown) metadata in your article.
 
 More information about how to configure your template are available on the plugin repository.
 
@@ -58,9 +78,9 @@ More information about how to configure your template are available on the plugi
 
 ### Website Search
 
-[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so it has been replaced by [**Lunr.js**](https://github.com/olivernn/lunr.js).
+[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so I have forked it and created [**Lunr-search**](https://github.com/mpaglia0/Lunr-search) a plugin that produces a JSON file suitable to be used with [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
-:warning: Don't be tricked by the fact the Pelican plugin is still called Tipue Search. The Pelican plugin simply produces an index (json) file that can work also for Lunr.js so you can go ahead and still use Tipue Search Pelican plugin!
+Lunr structure is all available inside the theme.
 
 ![Screenshot](screenshots/search.jpg)
 
@@ -72,19 +92,69 @@ More information about how to configure your template are available on the plugi
 
 - Added a ``STATIC_COMMENTS_SOURCE`` parameter in order to choose if comments have to be written in *Markdown* or *reST* format.
 
-- Added a PHP script (available in the ```static``` directory) that will allow visitors to send comments through the form (Static Comments needs you send the comment by email).
+- Added a PHP script (available in the ``static`` directory) that will allow visitors to send comments through the form (Static Comments needs you send the comment by email).
 
 :warning: Each article needs to have the ``slug`` metadata duly assigned in order to let this plugin works!
 
-Starting from Z v2.03 the Comment Form includes a simple SPAM filter based on a honeypot trick.
+Starting from **Z v2.03** the Comment Form includes a simple SPAM filter based on a honeypot trick.
 
-![Screenshot](screenshots/comments.jpg)
+![Screenshot](screenshots/comment-form.jpg)
 
 ### Read time
 
 A function that calculates and shows the approx. read time for articles has been added using the [Readtime](https://github.com/getpelican/pelican-plugins/tree/master/readtime) plugin.
 
 ![Screenshot](screenshots/readtime.jpg)
+
+### Share buttons
+
+**Removed AddThis for ethical/privacy reasons**.
+
+For privacy reason since **Z v3.0** the [AddThis](https://www.addthis.com/) service has been dropped in favour of the [**share-post**](https://github.com/pelican-plugins/share-post) plugin.
+
+In this occasion support for [share post on Mastodon](https://github.com/pelican-plugins/share-post/commit/89d1f123e8094245d11aaceb926ab05fffcac430) has been added to that plugin.
+
+### Post on Mastodon
+
+Always in view of more privacy and freedom a new plugin has been developed. It is called [**Pelican-toot**](https://github.com/mpaglia0/Pelican-toot) and will publish automatically new contents of your website on Mastodon.
+
+### Courses/Lessons
+
+Starting from **Z v3.0** you can organize online courses/lessons!
+
+Base document is *article* (so you can have all plus of articles like read time and comments).
+
+An article will became a lesson adding the following metadata keys:
+
+reST
+
+```rst
+:course: <course_title>
+:series: <course_title>
+:series_index: <order_of_lessons_starting_from_1>
+```
+
+Markdown
+
+```markdown
+course: <course_title>
+series: <course_title>
+series_index: <order_of_lessons_starting_from_1>
+```
+
+Explanation:
+
+**Course** key simply tells Jinja2 this document is not a standard article but a course lesson. The content of this key is not [yet] managed but I suggest to use the name (title) of the course. IF *course* is NOT empty Jinja2 will compile that page as a *lesson* instead of a normal *article* i.e.
+
+1. changes navigation button labels from *chapter* into *lesson* and
+
+2. builds an offcanvas index allowing navigation among lessons.
+
+**Series** is simply used to actually manage the course/lessons (title, index, etc.).
+
+**Series_index** forces lessons order. [Series](https://github.com/pelican-plugins/series) plugin orders items (lessons) using the creation date, but it could happen you have to insert a lesson between two existing ones. In this case *creation dates* cannot be used since the latest lesson you wrote will be listed at the end of your index. 
+
+To force the order you want, you have to use the *series_index* key. Enter 1, 2, 3, etc. in each of your articles and [Series](https://github.com/pelican-plugins/series) will order items following entered numbers and not creation dates.
 
 # Basic theme configuration
 
@@ -119,10 +189,10 @@ SOCIAL = (('twitter', 'https://twitter.com/myprofile'),
           ('github', 'https://github.com/myprofile'),
           ('facebook','https://facebook.com/myprofile'),
           ('flickr','https://www.flickr.com/myprofile/'),
-	  ('mail','mailto:your@email.address'))
+    	  ('mail','mailto:your@email.address'))
 ```
 
-If you plan to use a Contact Module and you think to add its relevant icon among the Social ones, you could enter:
+If you plan to use the Contact Module and you think to add its relevant icon among the Social ones, you could enter:
 
 ```python
 SOCIAL = (('mail', 'https://your-domain/your-contact-module'))
@@ -164,7 +234,7 @@ in order to build a single static page dedicated to you.
 
 ### Back-To-Top button
 
-This feature has been removed since ver. 2.0 of **Z** that now uses a more comfortable fixed-top menu bar.
+This feature has been removed since ver. 2.0 of **Z** since now a more comfortable fixed-top menu bar is used.
 
 ### Code highlights
 
@@ -261,9 +331,11 @@ Will return -> **2015 - 2021**
 
 Kept only the free Matomo (aka Piwik) system.
 
- - Matomo: ``MATOMO_URL`` and ``MATOMO_SITE_ID``.
-
 :warning: needs new Matomo > 4.0
+
+ On ``publishconf.py`` set ``ACTIVATE_MATOMO`` to ``True``
+
+:warning: starting from **Z v3.0** the Matomo integration has changed in order to be CSP compliant. The ``analytics.html`` page has been removed from ``templates`` and a ``matomo-tracking.js`` file has been added in ``static/js``.
 
 ### Favicon
 
@@ -292,7 +364,7 @@ Minification with Webasset comes fully configured. For more information you can 
 
 ### Other configuration parameters
 
- - If ``ADDTHIS_PUBID`` is defined, sharing buttons from AddThis will appear at the bottom of the article;
+ - If ``SHOW_SHARE_BUTTONS`` is set to ``True``, sharing buttons will appear at the bottom of the article (needs [share-post](https://github.com/pelican-plugins/share-post) plugin);
  - ``GOOGLE_SITE_VERIFICATION`` - Google site verification token;
  - ``BING_SITE_VERIFICATION`` - Bing site verification token;
  - Set ``SHOW_FULL_ARTICLE`` to ``True`` to show full article content on index.html instead of summary;
@@ -304,7 +376,7 @@ Minification with Webasset comes fully configured. For more information you can 
 
 A gettext method has been used. This is a good method if you have only a few strings to be translated (this is the case for templates).
 
-At the bottom of your ``pelicanconf.py`` file enter the following instruction:
+Create a text file in your website root directory and rename it - for example - ``myfunctions.py``. Fill this file with the following instruction:
 
 ```python
 # custom Jinja2 filter for localizing theme
@@ -314,13 +386,17 @@ def gettext(string, lang):
     elif lang == "it":
         if string == "Archives": return "Archivi"
         elif string == "Archives for": return "Archivi per"
-	elif string == "Posted by": return "Pubblicato da"
-	...
+	    elif string == "Posted by": return "Pubblicato da"
         ...
+	...
         else: return string
-        
- JINJA_FILTERS = {
-     "gettext": gettext,
+```
+Now you have to call it at the end of your ``pelicanconf.py`` in this way:
+
+```python
+import myfunctions
+JINJA_FILTERS = {
+     'gettext': myfunctions.gettext,
 }
 ```
 
@@ -334,7 +410,7 @@ def gettext(string, lang):
 
 Twitter cards are automatically generated if the ``twitter`` icon is configured in ``SOCIAL``!
  
-Since OpenGraph images and Twitter images have different dimensions, and you do not want them to be cut by social engines, two example templates are available in the ```static/image``` directory.
+Since OpenGraph images and Twitter images have different dimensions, and you do not want them to be cut by social engines, two example templates are available in the ```static/images``` directory.
 
 All image paths are relative to the site root directory!
 
@@ -342,7 +418,7 @@ You can also use absolute URLs for ``og_image`` and ``twitter_image``.
 
 Other metadata can be created to assign resume of article, with ``headline``:
 
- - To RST
+ - reST
 
 ```rst
 My title
@@ -358,7 +434,7 @@ My title
 :headline: Resume of article
 ```
 
- - To Markdown
+ - Markdown
 
 ```markdown
 Title: My title
@@ -374,6 +450,6 @@ Headline: Resume of article
 This is the content of my blog post.
 ```
 
-Feel free to use **Z** for your projects and send comments and/or suggestions.
+Feel free to use **Z** for your projects and to send comments and/or suggestions.
 
 Enjoy!

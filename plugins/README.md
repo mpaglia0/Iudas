@@ -12,7 +12,7 @@ A few of them are **Compulsory**, some are **Suggested** (because can activate n
 ## SUGGESTED
 
 - [Sitemap](https://github.com/pelican-plugins/sitemap)
-- [Tipue search](https://github.com/pelican-plugins/tipue-search)
+- [Lunr-search](https://github.com/mpaglia0/Lunr-search)
 - [SEO](https://github.com/pelican-plugins/seo)
 
 ## OPTIONAL
@@ -20,5 +20,3 @@ A few of them are **Compulsory**, some are **Suggested** (because can activate n
 - [Series](https://github.com/pelican-plugins/series)
 - [Readtime](https://github.com/JenkinsDev/pelican-readtime)
 - [Static Comments Plus](https://github.com/mpaglia0/Static_Comments_Plus)
-- [Bootstrap rst](https://github.com/getpelican/pelican-plugins/tree/master/bootstrap-rst)
-- [Pelican-tweet](https://github.com/mpaglia0/Pelican-tweet)
