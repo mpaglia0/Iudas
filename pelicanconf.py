@@ -21,8 +21,8 @@ DEFAULT_DATE = 'fs'
 DEFAULT_DATE_FORMAT = '%d/%m/%Y'
 TIMEZONE = 'UTC'
 
-DEFAULT_LANG = 'it' # Set it depending your own language
-LOCALE = 'it_IT.UTF-8' # Set it depending your own language
+DEFAULT_LANG = 'it' # Adjust with your own language
+LOCALE = 'it_IT.UTF-8' # Adjust with your own language
 
 # Adds some nice effects to text
 TYPOGRIFY = True
@@ -32,14 +32,16 @@ SUMMARY_MAX_LENGTH = 50
 SUMMARY_END_SUFFIX = ' …'
 
 # Web site statistics
-# Matomo > 4.0. More information in js/matomo-tracking.js
+# Matomo > 4.0 needed
+# More settings in js/matomo-tracking.js
 ACTIVATE_MATOMO = True
 
-# Feed generation is usually not desired when developing
+# Feed generation is usually not desired when developing so
+# set all to 'None'. Duplicate this configuration in publishconf.py
 FEED_ALL_ATOM = None
-FEED_ALL_RSS = 'feed/all.rss.xml' # during development leave at <None>
+FEED_ALL_RSS = 'feed/all.rss.xml'
 CATEGORY_FEED_ATOM = None
-CATEGORY_FEED_RSS = 'feed/{slug}.rss.xml' # during development leave at <None>
+CATEGORY_FEED_RSS = 'feed/{slug}.rss.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
@@ -139,7 +141,7 @@ PLUGINS = [
   'pelican.plugins.series'
 ]
 
-# Sitemap
+# Config for Sitemap plugin
 SITEMAP = {
     'format': 'xml',
     'priorities': {
@@ -154,13 +156,13 @@ SITEMAP = {
     }
 }
 
-# Static comments plus
+# Config for Static Comments Plus plugin
 STATIC_COMMENTS_PLUS = True
 STATIC_COMMENTS_DIR = 'comments'
 STATIC_COMMENTS_SOURCE = 'RST'
-SHOW_COMMENTS = True #Set to False if you want to present comment area collapsed by default
+SHOW_COMMENTS = True #Set to 'False' if you want to present comment area collapsed by default
 
-# Readtime
+# Config for Readtime plugin
 READTIME_WPM = {
      'it': {
         'wpm': 190,
