@@ -1,0 +1,60 @@
+RewriteEngine On
+
+###################
+# Force HTTPS use #
+###################
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*)$ https://Your-domain-here/$1 [L,R=301]
+
+##################
+# Hide .htaccess #
+##################
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+############################
+# Hide directory structure #
+############################
+
+Options All -Indexes
+
+############################
+# Set some safety policies #
+############################
+
+<IfModule mod_headers.c>
+	Header set X-XSS-Protection "1; mode=block"
+	Header set X-Frame-Options "SAMEORIGIN"
+	Header set X-Content-Type-Options "nosniff"
+	Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+	Header set Referrer-Policy "same-origin"
+	Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
+   Header set Content-Security-Policy "default-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' https://licensebuttons.net data:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self'; script-src 'self' 'sha256-n8bHdmNVirC2MYIbYK1hta7H/fPwi4ddyOGtrVSlvXw=' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';"
+</IfModule>
+
+######################
+# Custom error pages #
+######################
+
+ErrorDocument 301 /301.html
+ErrorDocument 401 /401.html
+ErrorDocument 404 /404.html
+
+#############################
+# Hide index.html and .html #
+#############################
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.html [NC,L]
+
+#####################################################
+# Deny links to images and CSS using your bandwidth #
+#####################################################
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?Your-domain-here/.*$ [NC]
+RewriteRule \.(png|jpg|css)$ - [F]
