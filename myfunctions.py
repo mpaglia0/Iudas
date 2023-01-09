@@ -5,7 +5,7 @@ def gettext(string, lang):
     elif lang == "it":
         if string == "Archives": return "Archivi"
         elif string == "Archives for": return "Archivi per"
-	    elif string == "Posted by": return "Pubblicato da"
+	elif string == "Posted by": return "Pubblicato da"
         ...
-	    ...
+	...
         else: return string
