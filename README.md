@@ -118,6 +118,22 @@ In this occasion support for [share post on Mastodon](https://github.com/pelican
 
 Always in view of more privacy and freedom a new plugin has been developed. It is called [**Pelican-toot**](https://github.com/mpaglia0/Pelican-toot) and will publish automatically new contents of your website on Mastodon.
 
+### Sensitive contents
+
+**Z** takes also care for people respect!
+
+Adding to an image the CSS class ``img-blurred`` you will obtain a blurred (semi-visible) image.
+
+Hovering the mouse cursor over the blurred image will show it completely (without the blur filter).
+
+You could also advise people with a dedicated advice.
+
+A CSS class ``sensitive`` is available for this step and will render a white-on-black text.
+
+The final result will be the following.
+
+![Screenshot](screenshots/sensitive.jpg)
+
 ### Courses/Lessons
 
 Starting from **Z v3.0** you can organize online courses/lessons!
