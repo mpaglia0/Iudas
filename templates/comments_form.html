@@ -1,24 +1,24 @@
 <form action="/theme/php/send-message.php" method="post" accept-charset="utf-8">
    <div>
-      <input class="invisible readonly" type="text" id="arttitle" name="arttitle" value="{{ article.metadata.title }}" />
+      <input class="invisible readonly" type="text" id="arttitle" name="arttitle" value="{{ article.metadata.title }}" >
    </div>
    <div class="mb-3">
       <label>{{ 'Name'|gettext(DEFAULT_LANG) }}</label>
       <input type="text" class="form-control form-control-lg" name="name" id="name"
-         placeholder="{{ 'Please enter here your name'|gettext(DEFAULT_LANG) }}" required />
+         placeholder="{{ 'Please enter here your name'|gettext(DEFAULT_LANG) }}" required >
       <div class="form-text">{{ 'Mandatory'|gettext(DEFAULT_LANG) }}</div>
    </div>
    <div class="mb-3">
       <label>{{ 'Your email'|gettext(DEFAULT_LANG) }}</label>
       <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control form-control-lg"
          name="email" id="email" placeholder="{{ 'Please enter here a valid email address'|gettext(DEFAULT_LANG) }}"
-         required />
+         required >
       <div class="form-text">{{ 'Mandatory'|gettext(DEFAULT_LANG) }}</div>
    </div>
    <div class="mb-3">
       <label>{{ 'Website'|gettext(DEFAULT_LANG) }}</label>
       <input type="text" class="form-control form-control-lg" name="website" id="website"
-         placeholder="{{ 'Please enter here your website address'|gettext(DEFAULT_LANG) }}" />
+         placeholder="{{ 'Please enter here your website address'|gettext(DEFAULT_LANG) }}" >
       <div class="form-text">{{ 'Optional'|gettext(DEFAULT_LANG) }}</div>
    </div>
    <div class="mb-3">
