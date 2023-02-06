@@ -329,7 +329,7 @@ Will return -> **2015 - 2021**
 
 **Removed Google Analytics for ethical/privacy reasons**.
 
-Kept only the free Matomo (aka Piwik) system.
+Kept only the free [Matomo](https://matomo.org/) (aka Piwik) system.
 
 :warning: needs new Matomo > 4.0
 
