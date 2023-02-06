@@ -16,7 +16,7 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 - No jQuery dependencies
 
-- Content Security Policy ([CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)) has been implemented.
+- Content Security Policy ([CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)).
 
 - All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
