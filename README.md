@@ -24,7 +24,7 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 **Z** is developed with Privacy as a main target.
 
-Starting from **Z v.3.0** Security has been keep in great account also.
+Starting from **Z v.3.0** Security has been kept in great account also.
 
 In the repo you can find a sample of ``.htaccess`` with many suggestions about safe server configuration parameters.
 
