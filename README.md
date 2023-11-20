@@ -116,7 +116,7 @@ In this occasion support for [share post on Mastodon](https://github.com/pelican
 
 ### Post on Mastodon
 
-Always in view of more privacy and freedom a new plugin has been developed. It is called [**Pelican-toot**](https://github.com/mpaglia0/Pelican-toot) and will publish automatically new contents of your website on Mastodon.
+Always in view of more privacy and freedom a new plugin has been developed. It is called [**Pelican-fediverse**](https://github.com/pelican-plugins/fediverse) and will publish automatically new contents of your website on Mastodon.
 
 ### Sensitive contents
 
