@@ -2,7 +2,7 @@
 
 Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
-:warning: **Needs [Pelican](https://blog.getpelican.com/) > ver. 4.0** (*tested till ver. 4.9.1)
+:warning: **Needs [Pelican](https://blog.getpelican.com/) > ver. 4.0** (*tested till ver. 4.9.1*)
 
 ## Some details...
 
