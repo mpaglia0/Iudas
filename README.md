@@ -4,6 +4,8 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 :warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.9.1*)
 
+**Z** was initially inspired by Clean Blog layout but now it is following a complete separate developing roadmap.
+
 ## Some details...
 
 - HTML5 tags
@@ -26,7 +28,7 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 Starting from **Z v.3.0** Security has been kept in great account also.
 
-In the repo you can find a sample of ``.htaccess`` with many suggestions about safe server configuration parameters.
+In the repo you can find a sample of ``.htaccess`` file with some suggestions about safe server configuration parameters.
 
 :warning: This file has to be considered as a simple suggestion only. NEVER apply any line of code if you do not know what you are exactly doing!
 
@@ -80,7 +82,7 @@ More information about how to configure your template are available on the plugi
 
 [**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so I have forked it and created [**Lunr-search**](https://github.com/mpaglia0/Lunr-search) a plugin that produces a JSON file suitable to be used with [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
-Lunr structure is all available inside the theme.
+Lunr structure is available inside the theme and can work out of the box.
 
 ![Screenshot](screenshots/search.jpg)
 
@@ -116,7 +118,7 @@ In this occasion support for [share post on Mastodon](https://github.com/pelican
 
 ### Post on Mastodon
 
-Always in view of more privacy and freedom a new plugin has been developed. It is called [**Pelican-fediverse**](https://github.com/pelican-plugins/fediverse) and will publish automatically new contents of your website on Mastodon.
+Always in view of more privacy and freedom a new plugin has been developed. It is called [**Pelican-fediverse**](https://github.com/pelican-plugins/fediverse) and can publish automatically new contents of your website on Mastodon.
 
 ### Sensitive contents
 
@@ -126,9 +128,9 @@ Adding to an image the CSS class ``img-blurred`` you will obtain a blurred (semi
 
 Hovering the mouse cursor over the blurred image will show it completely (without the blur filter).
 
-You could also advise people with a dedicated advice.
+You can also advise people with a dedicated advice!
 
-A CSS class ``sensitive`` is available for this step and will render a white-on-black text.
+The CSS class ``sensitive`` is available for this step and will render a white-on-black text.
 
 The final result will be the following.
 
@@ -138,7 +140,7 @@ The final result will be the following.
 
 Starting from **Z v3.0** you can organize online courses/lessons!
 
-Base document is *article* (so you can have all plus of articles like read time and comments).
+Base document is *article* (so you can benefit from all plus of articles like read time and comments).
 
 An article will became a lesson adding the following metadata keys:
 
@@ -168,7 +170,7 @@ Explanation:
 
 **Series** is simply used to actually manage the course/lessons (title, index, etc.).
 
-**Series_index** forces lessons order. [Series](https://github.com/pelican-plugins/series) plugin orders items (lessons) using the creation date, but it could happen you have to insert a lesson between two existing ones. In this case *creation dates* cannot be used since the latest lesson you wrote will be listed at the end of your index. 
+**Series_index** forces lessons order. [Series](https://github.com/pelican-plugins/series) plugin orders items (lessons, in our specific case) using the creation date, but it could happen you have to insert a lesson between two existing ones. In this case *creation dates* cannot be used since the latest lesson you wrote will be listed at the end of your index. 
 
 To force the order you want, you have to use the *series_index* key. Enter 1, 2, 3, etc. in each of your articles and [Series](https://github.com/pelican-plugins/series) will order items following entered numbers and not creation dates.
 
