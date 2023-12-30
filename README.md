@@ -32,6 +32,10 @@ In the repo you can find a sample of ``.htaccess`` file with some suggestions ab
 
 :warning: This file has to be considered as a simple suggestion only. NEVER apply any line of code if you do not know what you are exactly doing!
 
+Starting from **Z v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
+
+![Screenshot](screenshots/Mosparo.jpg)
+
 ## Screenshots
 
 ### Article/Page
@@ -70,6 +74,8 @@ You can use it including the HTML code in a customized page.
 
 Starting from **Z v2.03** the Contact Form includes a simple SPAM filter based on a honeypot trick.
 
+Starting from **Z v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
+
 ### Integration of Series plugin
 
 In order to use the [Series](https://github.com/pelican-plugins/series) plugin simply enter a ``:series:`` (reST) or ``Series:`` (Markdown) metadata in your article.
@@ -99,6 +105,8 @@ Lunr structure is available inside the theme and can work out of the box.
 :warning: Each article needs to have the ``slug`` metadata duly assigned in order to let this plugin works!
 
 Starting from **Z v2.03** the Comment Form includes a simple SPAM filter based on a honeypot trick.
+
+Starting from **Z v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
 
 ![Screenshot](screenshots/comment-form.jpg)
 
