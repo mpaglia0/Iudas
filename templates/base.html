@@ -11,6 +11,9 @@
 {# Bootsrap Icons Support #}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+{% if ACTIVATE_MOSPARO %}
+<link href="https://{{ MOSPARO_HOST }}/public/resources/[mosparo_UID]/[mosparo_UID].css" rel="stylesheet">
+{% endif %}
 
 {# Minify Bootstrap CSS for Z #}
 {% assets filters="cssmin", output="css/bootstrapz.min.css", "bootstrapz.css" %}
@@ -247,6 +250,11 @@
 <script>
 function validateForm(n){return 0<n.length}
 </script>
+
+{% if ACTIVATE_MOSPARO %}
+<script src="https://{{ MOSPARO_HOST }}/public/build/mosparo-frontend.js" defer></script>
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/mosparo.js"></script>
+{% endif %}
 
 </body>
 

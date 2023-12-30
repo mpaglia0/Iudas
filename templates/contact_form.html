@@ -2,29 +2,31 @@
 </hr>
 <form action="/theme/php/send-message.php" method="post">
    <div class="mb-3">
-      <label>Name</label>
-      <input required type="text" class="form-control form-control-lg" id="name" name="name"
+      <label for="name">Name</label>
+      <input required type="text" class="form-control form-control-lg" id="name" name="name" autocomplete="given-name"
          placeholder="Enter here your name" >
       <div class="form-text">Needed</div>
    </div>
    <div class="mb-3">
-      <label>Email</label>
+      <label for="email">Email</label>
       <input required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-         class="form-control form-control-lg" id="email" name="email" placeholder="Enter here your email" >
+         class="form-control form-control-lg" id="email" name="email" autocomplete="off" placeholder="Enter here your email" >
       <div class="form-text">Needed</div>
    </div>
    <div class="mb-3">
-      <label>Subject</label>
-      <input type="text" class="form-control form-control-lg" id="subject" name="subject"
-         placeholder="A short but clear subject" >
+      <label for="subject">Subject</label>
+      <input type="text" class="form-control form-control-lg" id="subject" name="subject" autocomplete="off"
+         placeholder="Fill with a brief but self-explanatory subject" >
       <div class="form-text">Optional</div>
    </div>
    <div class="mb-3">
-      <label>Message</label>
-      <textarea required class="form-control form-control-lg" id="message" name="message" style="height: 100px"
+      <label for="message">Message</label>
+      <textarea required class="form-control form-control-lg" id="message" name="message" autocomplete="off" style="height: 100px"
          placeholder="Enter here your message" ></textarea>
       <div class="form-text">Needed</div>
    </div>
-   <input class="invisible" name="phone_number" id="phone_number">
-   <button type="submit" class="btn btn-outline-primary">Send</button>
+   <input class="invisible mosparo__ignored-field" name="phone_number" id="phone_number" autocomplete="off">
+      <!-- Uncomment the <div> here below in order to show Mosparo spam filter -->
+      <!-- <div id="mosparo_spambox"></div> -->
+   <button style="margin-top: 30px" type="submit" class="btn btn-outline-primary"><i class="bi bi-send-check"></i>  Send</button>
 </form>

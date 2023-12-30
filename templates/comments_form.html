@@ -27,6 +27,8 @@
          placeholder="{{ 'Please enter here your comment'|gettext(DEFAULT_LANG) }}" required></textarea>
       <div class="form-text">{{ 'Mandatory'|gettext(DEFAULT_LANG) }}</div>
    </div>
-   <input class="invisible" name="phone_number" id="phone_number">
+   <input class="invisible mosparo__ignored-field" name="phone_number" id="phone_number">
+         <!-- Uncomment the <div> here below in order to show Mosparo spam filter -->
+      <!-- <div id="mosparo_spambox"></div> -->
    <button type="submit" class="btn btn-outline-primary">{{ 'Submit'|gettext(DEFAULT_LANG) }}</button>
 </form>
