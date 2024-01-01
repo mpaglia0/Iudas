@@ -35,12 +35,12 @@ SUMMARY_END_SUFFIX = ' …'
 # Matomo > 4.0 needed
 # More settings in js/matomo-tracking.js
 # Move this feature to your publishconf.py
-ACTIVATE_MATOMO = True
+ACTIVATE_MATOMO = False
 
 # Activate Mosparo SPAM protection
 # Needs a working Mosparo installation
 # Move this feature to your publishconf.py
-ACTIVATE_MOSPARO = True
+ACTIVATE_MOSPARO = False
 MOSPARO_HOST = 'mosparo_host_here_without_https://'
 
 # Feed generation is usually not desired when developing so
