@@ -1,6 +1,6 @@
 <form action="/theme/php/send-message.php" method="post" accept-charset="utf-8">
    <div>
-      <input class="invisible readonly" type="text" id="arttitle" name="arttitle" value="{{ article.metadata.title }}" >
+      <input class="invisible readonly" type="text" id="arttitle" name="arttitle" value="{{ article.title|striptags }}" >
    </div>
    <div class="mb-3">
       <label>{{ 'Name'|gettext(DEFAULT_LANG) }}</label>
