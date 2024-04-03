@@ -1,10 +1,10 @@
-# This is **Z** (a privacy focused Pelican theme)
+# This is **Iudas** (a privacy focused Pelican theme)
 
 Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
 :warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.9.1*)
 
-**Z** was initially inspired by Clean Blog layout but now it is following a complete separate developing roadmap.
+**Iudas** was initially inspired by Clean Blog layout but now it is following a complete separate developing roadmap.
 
 ## Some details...
 
@@ -24,15 +24,15 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 ## More privacy, more security
 
-**Z** is developed with Privacy as a main target.
+**Iudas** is developed with Privacy as a main target.
 
-Starting from **Z v.3.0** Security has also been kept in great account.
+Starting from **Iudas v.3.0** Security has also been kept in great account.
 
 In the repo you can find a sample of ``.htaccess`` file with some suggestions about safe server configuration parameters.
 
 :warning: This file has to be considered as a simple suggestion only. NEVER apply any line of code if you do not know what you are exactly doing!
 
-Starting from **Z v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
+Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
 
 ![Screenshot](screenshots/Mosparo.jpg)
 
@@ -72,9 +72,9 @@ You can use it including the HTML code in a customized page.
 
 :warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory.
 
-Starting from **Z v2.03** the Contact Form includes a simple SPAM filter based on a honeypot trick.
+Starting from **Iudas v2.03** the Contact Form includes a simple SPAM filter based on a honeypot trick.
 
-Starting from **Z v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
+Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
 
 ### Integration of Series plugin
 
@@ -104,9 +104,9 @@ Lunr structure is available inside the theme and can work out of the box.
 
 :warning: Each article needs to have the ``slug`` metadata duly assigned in order to let this plugin works!
 
-Starting from **Z v2.03** the Comment Form includes a simple SPAM filter based on a honeypot trick.
+Starting from **Iudas v2.03** the Comment Form includes a simple SPAM filter based on a honeypot trick.
 
-Starting from **Z v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
+Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
 
 ![Screenshot](screenshots/comment-form.jpg)
 
@@ -120,7 +120,7 @@ A function that calculates and shows the approx. read time for articles has been
 
 **Removed AddThis for ethical/privacy reasons**.
 
-For privacy reason since **Z v3.0** the [AddThis](https://www.addthis.com/) service has been dropped in favour of the [**share-post**](https://github.com/pelican-plugins/share-post) plugin.
+For privacy reason since **Iudas v3.0** the [AddThis](https://www.addthis.com/) service has been dropped in favour of the [**share-post**](https://github.com/pelican-plugins/share-post) plugin.
 
 In this occasion support for [share post on Mastodon](https://github.com/pelican-plugins/share-post/commit/89d1f123e8094245d11aaceb926ab05fffcac430) has been added to that plugin.
 
@@ -130,7 +130,7 @@ Always in view of more privacy and freedom a new plugin has been developed. It i
 
 ### Sensitive contents
 
-**Z** takes also care for people respect!
+**Iudas** takes also care for people respect!
 
 Adding to an image the CSS class ``img-blurred`` you will obtain a blurred (semi-visible) image.
 
@@ -146,7 +146,7 @@ The final result will be the following.
 
 ### Courses/Lessons
 
-Starting from **Z v3.0** you can organize online courses/lessons!
+Starting from **Iudas v3.0** you can organize online courses/lessons!
 
 Base document is *article* (so you can benefit from all plus of articles like read time and comments).
 
@@ -184,7 +184,7 @@ To force the order you want, you have to use the *series_index* key. Enter 1, 2,
 
 # Basic theme configuration
 
-### All following configuration parameters are valid only for **Z** theme.
+### All following configuration parameters are valid only for **Iudas** theme.
 
 Properties have to be entered in ``pelicanconf.py``. For your convenience, you can find a ``pelicanconf.py`` template in this repo. You can look here in order to have a nice starting point.
 
@@ -260,7 +260,7 @@ in order to build a single static page dedicated to you.
 
 ### Back-To-Top button
 
-This feature has been removed since ver. 2.0 of **Z** since now a more comfortable fixed-top menu bar is used.
+This feature has been removed since ver. 2.0 of **Iudas** since now a more comfortable fixed-top menu bar is used.
 
 ### Code highlights
 
@@ -308,7 +308,7 @@ In the ``base.html`` template scroll to the bottom of the page and find this pie
 ```
 Set here the name of our own javascript and you are served.
 
-Starting from **Z ver. 2.0** ``Z.js`` has been completely removed but this feature
+Starting from **Iudas ver. 2.0** ``Z.js`` has been completely removed but this feature
 has been kept in order to let you use your own JavaScript (if needed).
 
 ### User defined footer
@@ -361,7 +361,7 @@ Kept only the free [Matomo](https://matomo.org/) (aka Piwik) system.
 
  On ``publishconf.py`` set ``ACTIVATE_MATOMO`` to ``True``
 
-:warning: starting from **Z v3.0** the Matomo integration has changed in order to be CSP compliant. The ``analytics.html`` page has been removed from ``templates`` and a ``matomo-tracking.js`` file has been added in ``static/js``.
+:warning: starting from **Iudas v3.0** the Matomo integration has changed in order to be CSP compliant. The ``analytics.html`` page has been removed from ``templates`` and a ``matomo-tracking.js`` file has been added in ``static/js``.
 
 ### Favicon
 
