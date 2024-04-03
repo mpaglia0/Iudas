@@ -1,5 +1,7 @@
 # This is **Iudas** (a privacy focused Pelican theme)
 
+![Screenshot](screenshots/IudasLogo.jpg)
+
 Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
 :warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.9.1*)
