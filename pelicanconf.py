@@ -9,8 +9,7 @@ sys.path.append(os.curdir)
 AUTHOR = 'your_name'
 SITENAME = 'your_website_name'
 SITESUBTITLE = 'fill_me_if_you_like'
-# Regarding SITEURL.
-# Leave blank (like the example here below) while developing.
+# Leave SITEURL blank (like the example here below) while developing.
 # Add SITEURL='https://www.your-site.com' in publishconf.py
 SITEURL=''
 
@@ -180,7 +179,7 @@ READTIME_WPM = {
     }
 }
 
-THEME = 'themes/Z'
+THEME = 'themes/Iudas'
 
 ###############################
 ###                         ###
