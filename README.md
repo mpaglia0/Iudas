@@ -4,7 +4,7 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 :warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.9.1*)
 
-**Iudas** was initially inspired by Clean Blog layout but now it is following a complete separate developing roadmap.
+**Iudas** was initially inspired by Clean Blog layout but now it is following a complete separate develop roadmap.
 
 ## Some details...
 
@@ -26,7 +26,7 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 **Iudas** is developed with Privacy as a main target.
 
-Starting from **Iudas v.3.0** Security has also been kept in great account.
+Starting from **Iudas v.3.0** security has also been kept in great account.
 
 In the repo you can find a sample of ``.htaccess`` file with some suggestions about safe server configuration parameters.
 
@@ -88,7 +88,7 @@ More information about how to configure your template are available on the plugi
 
 [**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so I have forked it and created [**Lunr-search**](https://github.com/mpaglia0/Lunr-search) a plugin that produces a JSON file suitable to be used with [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
-Lunr structure is available inside the theme and can work out of the box.
+Lunr structure is available inside the theme itself and can work out of the box.
 
 ![Screenshot](screenshots/search.jpg)
 
@@ -306,7 +306,7 @@ In the ``base.html`` template scroll to the bottom of the page and find this pie
    {% endassets %}
 {% endif %}
 ```
-Set here the name of our own javascript and you are served.
+Set here the name of your own javascript and you are served.
 
 Starting from **Iudas ver. 2.0** ``Z.js`` has been completely removed but this feature
 has been kept in order to let you use your own JavaScript (if needed).
