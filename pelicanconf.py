@@ -172,10 +172,10 @@ SHOW_COMMENTS = True #Set to 'False' if you want to present comment area collaps
 READTIME_WPM = {
      'it': {
         'wpm': 190,
-        'min_singular': 'minuto',
-        'min_plural': 'minuti',
-        'sec_singular': 'secondo',
-        'sec_plural': 'secondi'
+        'min_singular': 'minute',
+        'min_plural': 'minutes',
+        'sec_singular': 'second',
+        'sec_plural': 'seconds'
     }
 }
 
