@@ -68,6 +68,8 @@ Changed the original *Open Sans* font with Bootstrap 5 native fonts.
 
 ### Contact Form
 
+:warning: **Contact Form** is broken due to the fact PHP ``mail()`` function is deprecated. I am working on a more modern and robust solution!
+
 A Contact Form template is available in the ``template`` directory.
 
 You can use it including the HTML code in a customized page.
@@ -95,6 +97,8 @@ Lunr structure is available inside the theme itself and can work out of the box.
 ![Screenshot](screenshots/search.jpg)
 
 ### Static Comments Plus
+
+:warning: **Static Comments Plus** is broken due to the fact PHP ``mail()`` function is deprecated. I am working on a more modern and robust solution!
 
 **For ethical/privacy reasons DISQUS comment system has been removed**.
 
