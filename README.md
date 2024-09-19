@@ -68,13 +68,11 @@ Changed the original *Open Sans* font with Bootstrap 5 native fonts.
 
 ### Contact Form
 
-:warning: **Contact Form** is broken due to the fact PHP ``mail()`` function is deprecated. I am working on a more modern and robust solution!
-
 A Contact Form template is available in the ``template`` directory.
 
 You can use it including the HTML code in a customized page.
 
-:warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory.
+:warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory. In order to use this form you need to install [PHPMailer](https://github.com/PHPMailer/PHPMailer) classes.
 
 Starting from **Iudas v2.03** the Contact Form includes a simple SPAM filter based on a honeypot trick.
 
@@ -98,9 +96,9 @@ Lunr structure is available inside the theme itself and can work out of the box.
 
 ### Static Comments Plus
 
-:warning: **Static Comments Plus** is broken due to the fact PHP ``mail()`` function is deprecated. I am working on a more modern and robust solution!
-
 **For ethical/privacy reasons DISQUS comment system has been removed**.
+
+:warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory. In order to use this form you need to install [PHPMailer](https://github.com/PHPMailer/PHPMailer) classes.
 
 [**Static Comments Plus**](https://github.com/mpaglia0/Static_Comments_Plus) has been hacked from [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin and has the following improvements:
 
