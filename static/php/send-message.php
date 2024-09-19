@@ -60,7 +60,7 @@ try {
 
 	//Content
 	$mail->isHTML(false);
-	$headers .= "Content-Type: text/plain; charset=\"UTF-8\"; format=flowed \r\n";
+	$headers .= "Content-Type: text/plain; charset=\"UTF-8\"";
 	$headers .= "Mime-Version: 1.0 \r\n";
 	$headers .= "Content-Transfer-Encoding: quoted-printable \r\n";
 
