@@ -5,7 +5,7 @@
 
 Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
-:warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.9.1*)
+:warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.10*)
 
 **Iudas** was initially inspired by Clean Blog layout but now it is following a complete separate develop roadmap.
 
