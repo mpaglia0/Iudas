@@ -1,4 +1,5 @@
-# This is **Iudas** (a privacy focused Pelican theme)
+# This is **Iudas**!
+## (a privacy focused Pelican theme)
 
 ![Screenshot](screenshots/IudasLogo.jpg)
 
