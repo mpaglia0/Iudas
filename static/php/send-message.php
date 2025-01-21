@@ -7,6 +7,8 @@ if(!empty($phone_number)) {
 	exit();
 }
 
+//Initialize user PHP path
+ini_set("include_path", '/home/maurizi1/php:' . ini_get("include_path") );
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
@@ -16,6 +18,9 @@ require 'PHPMailer/SMTP.php';
 
 $mail = new PHPMailer(false); //If TRUE catch exceptions for debugging
 
+// If your language is NOT English
+// change it accordingly
+include_once './lang/it.php';
 
 // Set variables
 if(!isset($_POST['subject'])) {												 // contact only
@@ -41,17 +46,17 @@ try {
 	//SMTP server configuration
 	//$mail->SMTPDebug = SMTP::DEBUG_SERVER;              //Debug mode
 	$mail->isSMTP();                                      //Send through SMTP
-	$mail->Host       = 'your_SMTP_host';    			      //SMTP server
+	$mail->Host       = 'mail.mauriziopaglia.it';         //SMTP server
 	$mail->SMTPAuth   = true;                             //Use SMTP auth
-	$mail->Username   = 'your_SMTP_user';        			//SMTP username
-	$mail->Password   = 'your_SMTP_password';             //SMTP password
+	$mail->Username   = 'info@mauriziopaglia.it';         //SMTP username
+	$mail->Password   = 'k7UjiH%r2';                	   //SMTP password
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;   //Use implicit TLS
 	$mail->Port       = 587;                              //SMTP Port
 
 	//Recipients
-	$mail->setFrom('from_email_address', 'NOREPLY');  			//From address
-	$mail->addAddress('to_email_address', 'Info');  			//To address
-	$mail->addReplyTo('repòy-to_email_address', 'Info');  	//Address for replies
+	$mail->setFrom('noreply@mauriziopaglia.it', 'NOREPLY');  //From address
+	$mail->addAddress('info@mauriziopaglia.it', 'Info');  	//To address
+	$mail->addReplyTo('info@mauriziopaglia.it', 'Info');  	//Address for replies
 	//$mail->addCC('cc@gmail.com');                       	//CC address (Carbon Copy)
 	//$mail->addBCC('bcc@gmail.com');                     	//BCC address (Blind Carbon Copy)
 
@@ -60,17 +65,16 @@ try {
 
 	//Content
 	$mail->isHTML(false);
-	$headers .= "Content-Type: text/plain; charset=\"UTF-8\"";
+	$headers .= "Content-Type: text/plain; charset=\"UTF-8\"\r\n";
 	$headers .= "Mime-Version: 1.0 \r\n";
-	$headers .= "Content-Transfer-Encoding: quoted-printable \r\n";
 
 	if(empty($subject)) {
-		$mail->Subject = 'New Comment';
-		$mail->Body = "You received a new comment!\n\nHere the details:\n\nName: $name\nEmail: $email_address\nArticle title: $title\nWrbsite: $website\n\nMessage:\n$message";
+		$mail->Subject = "$CommentSubjectTXT";
+		$mail->Body = "$CommentBodyTXT \n\n $CommonDetailsTXT\n\n$CommonNameTXT $name\n$CommonEmailTXT $email_address\n$CommentArticleTitleTXT $title\n$CommentWebsiteTXT $website\n\n$CommonMessageTXT\n$message";
 	}
 	else {
-		$mail->Subject = 'New Contact';
-		$mail->Body = "You received a new message!\n\nHere the details:\n\nName: $name\nEmail: $email_address\nSubject: $subject\n\nMessage:\n$message";
+		$mail->Subject = "$ContactSubjectTXT";
+		$mail->Body = "$ContactBodyTXT\n\n$CommonDetailsTXT\n\n$CommonNameTXT $name\n$CommonEmailTXT $email_address\n$ContactSubjectBodyTXT $subject\n\n$CommonMessageTXT\n$message";
 	}
 
 	//If TRUE then use HTML text
@@ -79,10 +83,9 @@ try {
 	//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients'; 	//Email body for pure text email clients
 
 	$mail->send();
-	header('Location: /thank_you_page.html');
+	header('Location: /grazie.html');
 } catch (Exception $e) {
 	echo "Error while sending the message. Error is: {$mail->ErrorInfo}";
 }
 
-
-
+?>
