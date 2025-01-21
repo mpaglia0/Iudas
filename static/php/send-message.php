@@ -8,7 +8,7 @@ if(!empty($phone_number)) {
 }
 
 //Initialize user PHP path
-ini_set("include_path", '/home/maurizi1/php:' . ini_get("include_path") );
+ini_set("include_path", '<PHPMailer path here>' . ini_get("include_path") );
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
@@ -46,17 +46,17 @@ try {
 	//SMTP server configuration
 	//$mail->SMTPDebug = SMTP::DEBUG_SERVER;              //Debug mode
 	$mail->isSMTP();                                      //Send through SMTP
-	$mail->Host       = 'mail.mauriziopaglia.it';         //SMTP server
+	$mail->Host       = '<your host here>';         //SMTP server
 	$mail->SMTPAuth   = true;                             //Use SMTP auth
-	$mail->Username   = 'info@mauriziopaglia.it';         //SMTP username
-	$mail->Password   = 'k7UjiH%r2';                	   //SMTP password
+	$mail->Username   = '<your username here>';         //SMTP username
+	$mail->Password   = '<your password here>';                	   //SMTP password
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;   //Use implicit TLS
 	$mail->Port       = 587;                              //SMTP Port
 
 	//Recipients
-	$mail->setFrom('noreply@mauriziopaglia.it', 'NOREPLY');  //From address
-	$mail->addAddress('info@mauriziopaglia.it', 'Info');  	//To address
-	$mail->addReplyTo('info@mauriziopaglia.it', 'Info');  	//Address for replies
+	$mail->setFrom('noreply@email.com', 'NOREPLY');  //From address
+	$mail->addAddress('<recipient email here>', 'Info');  	//To address
+	$mail->addReplyTo('<reply to email here>', 'Info');  	//Address for replies
 	//$mail->addCC('cc@gmail.com');                       	//CC address (Carbon Copy)
 	//$mail->addBCC('bcc@gmail.com');                     	//BCC address (Blind Carbon Copy)
 
@@ -83,7 +83,7 @@ try {
 	//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients'; 	//Email body for pure text email clients
 
 	$mail->send();
-	header('Location: /grazie.html');
+	header('Location: <thank you page here>');
 } catch (Exception $e) {
 	echo "Error while sending the message. Error is: {$mail->ErrorInfo}";
 }
