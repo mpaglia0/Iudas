@@ -20,7 +20,7 @@ $mail = new PHPMailer(false); //If TRUE catch exceptions for debugging
 
 // If your language is NOT English
 // change it accordingly
-include_once './lang/it.php';
+include_once './lang/en.php';
 
 // Set variables
 if(!isset($_POST['subject'])) {												 // contact only
