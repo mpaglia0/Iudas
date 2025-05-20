@@ -65,7 +65,9 @@ Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has b
 
 ### Changed font
 
-Changed the original *Open Sans* font with Bootstrap 5 native fonts.
+Changed the original *Open Sans* font with a new font served locally. Atkinson Hyperlegible, developed by the Braille Insitut.
+
+Atkinson Hyperlegible makes Iudas more accessible then ever.
 
 ### Contact Form
 
