@@ -12,6 +12,12 @@
        url('../Fonts/TTF/Atkinson-Hyperlegible-BoldItalic-102.woff') format(woff);
 }
 
+@font-face {
+  font-family: 'EasyReading';
+  src: url('../Fonts/TTF/EasyReadingPRO.ttf') format(ttf),
+  url('../Fonts/TTF/EasyReadingPROItalic.ttf') format(ttf);
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -60,6 +66,7 @@
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: 'Atkinson-Hyperlegible', var(--bs-font-sans-serif);
+  /*--bs-body-font-family: 'EasyReading', var(--bs-font-sans-serif);*/
   --bs-body-font-size: 1.40rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
