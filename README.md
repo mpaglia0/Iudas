@@ -27,7 +27,7 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 ## More privacy, more security
 
-**Iudas** is developed with Privacy as a main target.
+**Iudas** is developed with Privacy and usability as a main target.
 
 Starting from **Iudas v.3.0** security has also been kept in great account.
 
@@ -65,9 +65,11 @@ Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has b
 
 ### Changed font
 
-Changed the original *Open Sans* font with a new font served locally. Atkinson Hyperlegible, developed by the Braille Insitut.
+Changed the original *Open Sans* font with a new font served locally: Atkinson Hyperlegible, developed by the Braille Insitut.
 
 Atkinson Hyperlegible makes Iudas more accessible then ever.
+
+Another hyperlegible font is also available (but disabled per default): EasyReadingPRO, developed to face dislexya.
 
 ### Contact Form
 
