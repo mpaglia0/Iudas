@@ -1,6 +1,6 @@
 # How to use Lunr search
 
-Lunr works out of the box and needs any coniguration.
+Lunr works out of the box and needs any configuration.
 
 If you desire to add supporto for your own language copy/paste `lunr.it.js` and rename it accordingly to your own language (`lunr.fr.js`, `lunr.de.js`, etc.) then translate it.
 
