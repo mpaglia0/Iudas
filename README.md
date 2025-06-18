@@ -27,9 +27,9 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 ## More privacy, more security
 
-**Iudas** is developed with Privacy and usability as a main target.
+**Iudas** is developed with Privacy and Accessibility as main targets.
 
-Starting from **Iudas v.3.0** security has also been kept in great account.
+Starting from **Iudas v.3.0** Security has also been kept in great account.
 
 In the repo you can find a sample of ``.htaccess`` file with some suggestions about safe server configuration parameters.
 
@@ -77,7 +77,7 @@ A Contact Form template is available in the ``template`` directory.
 
 You can use it including the HTML code in a customized page.
 
-:warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory. In order to use this form you need to install [PHPMailer](https://github.com/PHPMailer/PHPMailer) classes.
+:warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory. In order to use this form you need to install/activate [PHPMailer](https://github.com/PHPMailer/PHPMailer) classes on your hosting.
 
 Starting from **Iudas v2.03** the Contact Form includes a simple SPAM filter based on a honeypot trick.
 
@@ -93,9 +93,9 @@ More information about how to configure your template are available on the plugi
 
 ### Website Search
 
-[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more active project so I have forked it and created [**Lunr-search**](https://github.com/mpaglia0/Lunr-search) a plugin that produces a JSON file suitable to be used with [**Lunr.js**](https://github.com/olivernn/lunr.js).
+[**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more an active project so I have forked it and created [**Lunr-search**](https://github.com/mpaglia0/Lunr-search) a plugin that produces a JSON file suitable to be used with [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
-Lunr structure is available inside the theme itself and can work out of the box.
+Lunr search is available together with the theme itself and can work out of the box!
 
 ![Screenshot](screenshots/search.jpg)
 
@@ -103,13 +103,13 @@ Lunr structure is available inside the theme itself and can work out of the box.
 
 **For ethical/privacy reasons DISQUS comment system has been removed**.
 
-:warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory. In order to use this form you need to install [PHPMailer](https://github.com/PHPMailer/PHPMailer) classes.
+:warning: needs a PHP capable hosting! PHP code is available in the ``static`` directory. In order to use this form you need to install/activate [PHPMailer](https://github.com/PHPMailer/PHPMailer) classes on your hosting.
 
-[**Static Comments Plus**](https://github.com/mpaglia0/Static_Comments_Plus) has been hacked from [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin and has the following improvements:
+[**Static Comments Plus**](https://github.com/mpaglia0/Static_Comments_Plus) has been hacked from [Static Comments](https://github.com/getpelican/pelican-plugins/tree/master/static_comments) plugin but brings you the following improvements:
 
 - Added a ``STATIC_COMMENTS_SOURCE`` parameter in order to choose if comments have to be written in *Markdown* or *reST* format.
 
-- Added a PHP script (available in the ``static`` directory) that will allow visitors to send comments through the form (Static Comments needs you send the comment by email).
+- Added a PHP script (available in the ``static`` directory) that will allow visitors to send comments through the form (while original Static Comments plugin needs you send the comment by email).
 
 :warning: Each article needs to have the ``slug`` metadata duly assigned in order to let this plugin works!
 
@@ -141,9 +141,9 @@ Always in view of more privacy and freedom a new plugin has been developed. It i
 
 **Iudas** takes also care for people respect!
 
-Adding to an image the CSS class ``img-blurred`` you will obtain a blurred (semi-visible) image.
+Adding to an image the CSS class ``img-blurred`` you can obtain a blurred (semi-visible) image.
 
-Hovering the mouse cursor over the blurred image will show it completely (without the blur filter).
+Hovering the mouse cursor over the blurred image will show it clearly (without the blur filter).
 
 You can also advise people with a dedicated advice!
 
