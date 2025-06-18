@@ -1,13 +1,13 @@
-# This is **Iudas**!
+# Hi! I'm **Iudas**!
 ## (a privacy focused Pelican theme)
 
 ![Screenshot](screenshots/IudasLogo.jpg)
 
 Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
 
-:warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.11*)
-
 **Iudas** was initially inspired by Clean Blog layout but now it is following a complete separate develop roadmap.
+
+:warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.11*)
 
 ## Some details...
 
@@ -213,15 +213,14 @@ To define a simple header background color, set the property ``HEADER_COLOR``:
 HEADER_COLOR = 'black'
 ```
 
-You can use any valid CSS color definition.
+You can use here any valid CSS color definition.
 
 ### Social URLs
 
-For Github, Twitter and other URLs set these properties:
+For Github, Facebook and other URLs set these properties:
 
 ```python
-SOCIAL = (('twitter', 'https://twitter.com/myprofile'),
-          ('github', 'https://github.com/myprofile'),
+SOCIAL = (('github', 'https://github.com/myprofile'),
           ('facebook','https://facebook.com/myprofile'),
           ('flickr','https://www.flickr.com/myprofile/'),
     	  ('mail','mailto:your@email.address'))
@@ -364,7 +363,7 @@ Will return -> **2015 - 2021**
 
 **Removed Google Analytics for ethical/privacy reasons**.
 
-Kept only the free [Matomo](https://matomo.org/) (aka Piwik) system.
+Kept only the free [Matomo](https://matomo.org/) (previously Piwik) system.
 
 :warning: needs new Matomo > 4.0
 
@@ -409,7 +408,7 @@ Minification with Webasset comes fully configured. For more information you can 
 
 ### Translation for templates strings
 
-A gettext method has been used. This is a good method if you have only a few strings to be translated (this is the case for templates).
+The gettext method has been used. This is a good method if you have only a few strings to be translated (this is the case for templates).
 
 Create a text file in your website root directory and rename it - for example - ``myfunctions.py``. Fill this file with the following instruction:
 
@@ -485,6 +484,6 @@ Headline: Resume of article
 This is the content of my blog post.
 ```
 
-Feel free to use **Z** for your projects and to send comments and/or suggestions.
+Feel free to use **Iudas** for your projects and to send comments and/or suggestions.
 
 Enjoy!
