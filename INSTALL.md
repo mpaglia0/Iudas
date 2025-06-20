@@ -1,6 +1,6 @@
 # How to install and run Iudas for the first time
 
-# A step-by-step guide
+## A step-by-step guide
 
 Installation of a theme in Pelican is a very easy task!
 
