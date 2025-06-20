@@ -38,3 +38,37 @@ Please note the unpacked root theme directory have the complete name (i.e. Iudas
 - Rename Iudas-`version` in *Iudas* and overwrite the old directory (install *Iudas* on top of the old one). In this way the old theme will be replaced by the new one.
 
 - Keep the directory AS IS in order to have available a 'theme history'. The theme will be installed along with previous versions (Iudas-3.1, Iudas-3.1.1 etc.) Update the theme name in your `pelicanconf.py` file and rebuild the website in order to have the new version. In this way you could also 'downgrade' a theme if you are not happy with it simply changing the relevant parameter in `pelicanconf.py` and rebuild the website!
+
+### Plugins
+
+Pelican can be easily expanded thanks to plugins.
+
+Unfortunately some plugins are available, and can be installed, through `pip` command, some other cannot...
+
+Iudas theme takes many advanteges from some plugins.
+
+I divided plugins used by Iudas in three categories:
+
+- **Compulsory**. You MUST install these plugins or Iudas will not work.
+
+- **Suggested**. Not necessary but useful for SEO or for a better user experience.
+
+- **Optional**. Needed if you desire to use some additional Iudas features.
+
+In the [PLUGIN](https://github.com/mpaglia0/Iudas/tree/main/plugins) directory you will find more informations.
+
+### Additional services
+
+Iudas take advantages from some external services.
+
+External services are at your choice so you have to explicit ENABLE them in your `pelicanconf.py` file.
+
+Moreover external services must be installed and configured before you can use them.
+
+In Iudas you will find some example coniguration files but please install/configure the service following the instructions on their relevant websites.
+
+At this stage Iudas includes:
+
+[Matomo](https://matomo.org/) for traffic statistics and
+
+[Mosparo](https://mosparo.io/) for spam management.
