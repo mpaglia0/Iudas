@@ -11,8 +11,11 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 ## T.o.C.
 
-[Some details](#details)
-[More privacy, more security](#privacy)
+- [Some details](#details)
+
+- [More privacy, more security](#privacy)
+
+- [Screenshots](#screenshots)
 
 <a id="details"></a>
 ## Some details...
@@ -46,6 +49,7 @@ Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has b
 
 ![Screenshot](screenshots/Mosparo.jpg)
 
+<a id="screenshots"></a>
 ## Screenshots
 
 ### Article/Page
