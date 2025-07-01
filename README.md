@@ -9,7 +9,10 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 :warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.11*)
 
-## Some details...
+## T.o.C.
+
+<a id="details"></a>
+## [Some details...](#details)
 
 - HTML5 tags
 
