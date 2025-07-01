@@ -11,8 +11,11 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 ## T.o.C.
 
+[Some details](#details)
+[More privacy, more security](#privacy)
+
 <a id="details"></a>
-## [Some details...](#details)
+## Some details...
 
 - HTML5 tags
 
@@ -28,6 +31,7 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 - All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
+<a id="privacy"></a>
 ## More privacy, more security
 
 **Iudas** is developed with Privacy and Accessibility as main targets.
