@@ -9,15 +9,6 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 :warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.11*)
 
-## T.o.C.
-
-- [Some details](#details)
-
-- [More privacy, more security](#privacy)
-
-- [Screenshots](#screenshots)
-
-<a id="details"></a>
 ## Some details...
 
 - HTML5 tags
@@ -34,7 +25,6 @@ Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/st
 
 - All main browsers versions are supported except Internet Explorer that is no more supported in any of its versions!
 
-<a id="privacy"></a>
 ## More privacy, more security
 
 **Iudas** is developed with Privacy and Accessibility as main targets.
@@ -49,7 +39,6 @@ Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has b
 
 ![Screenshot](screenshots/Mosparo.jpg)
 
-<a id="screenshots"></a>
 ## Screenshots
 
 ### Article/Page
@@ -72,9 +61,7 @@ Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has b
 
 ![Screenshot](screenshots/archives.jpg)
 
-## Highlights
-
-### Changed font
+## Changed font
 
 Changed the original *Open Sans* font with a new font served locally: Atkinson Hyperlegible, developed by the Braille Insitut.
 
@@ -82,7 +69,7 @@ Atkinson Hyperlegible makes Iudas more accessible then ever.
 
 Another hyperlegible font is also available (but disabled per default): EasyReadingPRO, developed to face dislexya.
 
-### Contact Form
+## Contact Form
 
 A Contact Form template is available in the ``template`` directory.
 
@@ -94,7 +81,7 @@ Starting from **Iudas v2.03** the Contact Form includes a simple SPAM filter bas
 
 Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
 
-### Integration of Series plugin
+## Integration of Series plugin
 
 In order to use the [Series](https://github.com/pelican-plugins/series) plugin simply enter a ``:series:`` (reST) or ``Series:`` (Markdown) metadata in your article.
 
@@ -102,7 +89,7 @@ More information about how to configure your template are available on the plugi
 
 ![Screenshot](screenshots/series.jpg)
 
-### Website Search
+## Website Search
 
 [**Tipue Search**](https://github.com/pelican-plugins/tipue-search) is a no more an active project so I have forked it and created [**Lunr-search**](https://github.com/mpaglia0/Lunr-search) a plugin that produces a JSON file suitable to be used with [**Lunr.js**](https://github.com/olivernn/lunr.js).
 
@@ -110,7 +97,7 @@ Lunr search is available together with the theme itself and can work out of the 
 
 ![Screenshot](screenshots/search.jpg)
 
-### Static Comments Plus
+## Static Comments Plus
 
 **For ethical/privacy reasons DISQUS comment system has been removed**.
 
@@ -130,13 +117,13 @@ Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has b
 
 ![Screenshot](screenshots/comment-form.jpg)
 
-### Read time
+## Read time
 
 A function that calculates and shows the approx. read time for articles has been added using the [Readtime](https://github.com/getpelican/pelican-plugins/tree/master/readtime) plugin.
 
 ![Screenshot](screenshots/readtime.jpg)
 
-### Share buttons
+## Share buttons
 
 **Removed AddThis for ethical/privacy reasons**.
 
@@ -144,11 +131,11 @@ For privacy reason since **Iudas v3.0** the [AddThis](https://www.addthis.com/) 
 
 In this occasion support for [share post on Mastodon](https://github.com/pelican-plugins/share-post/commit/89d1f123e8094245d11aaceb926ab05fffcac430) has been added to that plugin.
 
-### Post on Mastodon
+## Post on Fediverse
 
 Always in view of more privacy and freedom a new plugin has been developed. It is called [**Pelican-fediverse**](https://github.com/pelican-plugins/fediverse) and can publish automatically new contents of your website on Mastodon.
 
-### Sensitive contents
+## Sensitive contents
 
 **Iudas** takes also care for people respect!
 
@@ -164,7 +151,7 @@ The final result will be the following.
 
 ![Screenshot](screenshots/sensitive.jpg)
 
-### Courses/Lessons
+## Courses/Lessons
 
 Starting from **Iudas v3.0** you can organize online courses/lessons!
 

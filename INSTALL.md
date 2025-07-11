@@ -8,8 +8,7 @@ Installation of themes in Pelican is a very easy task!
 
 The dedicated Pelican `pelican-themes` command line utility will do all the job! `pelican-themes` utility is included in your standard Pelican installation. The official guide can be found [HERE](https://docs.getpelican.com/en/latest/pelican-themes.html).
 
->>>>>> TODO
->>>>>> Command line examples?
+To install Iudas you can also copy/paste the Iudas direcrory and all its content to <your_root_pelican_folder/themes>
 
 ### How Iudas project is organized
 
