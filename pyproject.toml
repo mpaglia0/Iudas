@@ -1,0 +1,37 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pelican-theme-iudas"
+version = "3.2.1"
+description = "A Pelican SSG blog theme focused on Privacy, Safety and Accessibility"
+authors = [
+	{ name = "Maurizio Paglia", email = "maurizio@mauriziopaglia.it" },
+]
+license = "LICENSE"
+readme = "README.md"
+changelog = "CHANGELOG.md"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+ "requests>2",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mpaglia0/Iudas"
+"Bug Tracker" = "https://github.com/mpaglia0/Iudas/issues"
+
+[tool.hatch.build]
+include = [
+  "pkg/*.py",
+  "/tests",
+]
+exclude = [
+  "*.json",
+  "pkg/_compat.py",
+]
