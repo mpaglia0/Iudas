@@ -1,11 +1,10 @@
 # Hi! I'm **Iudas**!
+
 ## (a privacy focused Pelican theme)
 
 ![Screenshot](screenshots/IudasLogo.jpg)
 
-Initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
-
-**Iudas** was initially inspired by Clean Blog layout but now it is following a complete separate develop roadmap.
+**Iudas** was initially inspired by [Clean Blog layout](https://github.com/BlackrockDigital/startbootstrap-clean-blog) but now it is following a complete separate develop roadmap.
 
 :warning: **Needs at least [Pelican](https://blog.getpelican.com/) ver. 4.0** (*tested till ver. 4.11*)
 
@@ -35,7 +34,7 @@ In the repo you can find a sample of ``.htaccess`` file with some suggestions ab
 
 :warning: This file has to be considered as a simple suggestion only. NEVER apply any line of code if you do not know what you are exactly doing!
 
-Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated.
+Starting from **Iudas v3.1** [Mosparo](https://mosparo.io/) spam detection has been integrated too.
 
 ![Screenshot](screenshots/Mosparo.jpg)
 
