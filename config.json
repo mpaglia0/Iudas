@@ -1,1 +1,6 @@
-#
+{
+  "packageName": "pelican-theme-iudas",
+  "packageUrl": "https://github.com/mpaglia0/Iudas/tree/main",
+  "projectName": "Iudas",
+  "packageVersion": "3.2"
+}
