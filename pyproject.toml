@@ -4,7 +4,7 @@ build-backend = "pdm.backend"
 
 [project]
 name = "pelican-theme-iudas"
-version = "3.3.1"
+version = "3.3.2"
 description = "A Pelican SSG blog theme focused on Privacy, Safety and Accessibility"
 authors = [
 	{ name = "Maurizio Paglia", email = "maurizio@mauriziopaglia.it" },
