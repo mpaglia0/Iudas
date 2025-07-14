@@ -1,47 +1,101 @@
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
-
 [project]
-name = "pelican-theme-iudas"
-version = "3.3.2"
+# Docs: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+name = "Iudas"
+version = "3.2"
+# Python versions and their status: https://devguide.python.org/versions/
+requires-python = ">= 3.10"
 description = "A Pelican SSG blog theme focused on Privacy, Safety and Accessibility"
-authors = [
-	{ name = "Maurizio Paglia", email = "maurizio@mauriziopaglia.it" },
-]
-license = "LICENSE"
+authors = [{ name = "Maurizio Paglia", email = "maurizio@mauriziopaglia.it" }]
 readme = "README.md"
-changelog = "CHANGELOG.md"
-keywords = ["pelican", "theme", "Iudas"]
+keywords = [
+    'pelican',
+    'pelican-theme',
+    'lunr.js',
+    'static-search',
+    'theme',
+    'bootstrap',
+]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
-    "Environment :: Console",
-    "Framework :: Pelican",
-    "Framework :: Pelican :: Themes",
-    "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: GNU Affero General Public License v3",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.9",
+    # See: https://pypi.org/pypi?%3Aaction=list_classifiers
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Plugins',
+    'Environment :: Web Environment',
+    'Framework :: Pelican :: Themes',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+    'Operating System :: OS Independent',
+    'Programming Language :: JavaScript',
+    'Programming Language :: Other',
+    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Topic :: Internet :: WWW/HTTP",
-    "Topic :: Software Development :: Libraries :: Python Modules",
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Topic :: Internet :: WWW/HTTP',
+    'Topic :: Internet :: WWW/HTTP :: Indexing/Search',
+    'Topic :: Text Processing :: Markup :: HTML',
+    'Typing :: Typed',
 ]
-requires-python = ">=3.9"
 dependencies = [
- "requests>2",
+    "cssmin ~= 0.2.0",              # XXX Unmaintained!
+    "libsass ~= 0.23.0",
+    "pelican >= 4.8.0",
+    "pelican-myst-reader ~= 1.4.0",
+    "pelican-webassets ~= 2.0.0",
+    "pygments ~= 2.18.0",
+    "pynpm ~= 0.2.0",
+    "pyquery ~= 2.0.0",
 ]
+
+[tool.setuptools.package-data]
+# Add all content found within the ./plumage subfolder.
+plumage = ["**"]
+
+[tool.setuptools.exclude-package-data]
+# Exclude the locked JS dependencies file.
+plumage = ["package-lock.json"]
+
+[project.optional-dependencies]
+djlint = ["djlint ~= 1.35.2"]
 
 [project.urls]
-"Homepage" = "https://github.com/mpaglia0/Iudas"
-"Bug Tracker" = "https://github.com/mpaglia0/Iudas/issues"
+"Homepage" = 'https://github.com/kdeldycke/plumage'
+"Documentation" = 'https://github.com/kdeldycke/plumage#settings'
+"Repository" = 'https://github.com/kdeldycke/plumage'
+"Funding" = "https://github.com/sponsors/kdeldycke"
+"Issues" = "https://github.com/kdeldycke/plumage/issues"
+"Changelog" = "https://github.com/kdeldycke/plumage/blob/main/changelog.md"
 
-[tool.pdm.build]
-source-includes = [
-    "CHANGELOG.md",
-    "README.md",
-]
-includes = ["pelican/"]
-excludes = ["**/.DS_Store"]
+[tool.mypy]
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+pretty = true
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = ["pyquery", "pynpm", "pelican.*"]
+
+[tool.bumpversion]
+current_version = "5.0.0"
+allow_dirty = true
+
+[[tool.bumpversion.files]]
+# Update Python package version in any __init__.py file.
+glob = "./**/__init__.py"
+ignore_missing_version = true
+
+[[tool.bumpversion.files]]
+# Update version in project section.
+filename = "./pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+# Update the version in standard Markdown changelog.
+filename = "./changelog.md"
+search = "## [{current_version} (unreleased)]("
+replace = "## [{new_version} (unreleased)]("
