@@ -52,17 +52,12 @@ dependencies = [
 
 [tool.setuptools.package-data]
 # Add all content found within the ./plumage subfolder.
-plumage = ["**"]
-
-[tool.setuptools.exclude-package-data]
-# Exclude the locked JS dependencies file.
-plumage = ["package-lock.json"]
+themes/Iudas = ["**"]
 
 [project.urls]
 "Homepage" = 'https://github.com/mpaglia0/Iudas/tree/main'
 "Documentation" = 'https://github.com/mpaglia0/Iudas/tree/main/README.md'
 "Repository" = 'https://github.com/mpaglia0/Iudas/tree/main'
-"Funding" = "https://github.com/mpaglia0/Iudas/tree/main"
 "Issues" = "https://github.com/mpaglia0/Iudas/tree/main/issues"
 "Changelog" = "https://github.com/mpaglia0/Iudas/tree/main/CHANGELOG.md"
 
@@ -81,11 +76,6 @@ module = ["pelican.*"]
 [tool.bumpversion]
 current_version = "3.2"
 allow_dirty = true
-
-[[tool.bumpversion.files]]
-# Update Python package version in any __init__.py file.
-glob = "./**/__init__.py"
-ignore_missing_version = true
 
 [[tool.bumpversion.files]]
 # Update version in project section.
