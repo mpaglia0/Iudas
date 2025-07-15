@@ -14,6 +14,10 @@ keywords = [
     'static-search',
     'theme',
     'bootstrap',
+    'privacy',
+    'safety',
+    'accessible',
+    'accessibility',
 ]
 classifiers = [
     # See: https://pypi.org/pypi?%3Aaction=list_classifiers
@@ -38,14 +42,12 @@ classifiers = [
     'Typing :: Typed',
 ]
 dependencies = [
-    "cssmin ~= 0.2.0",              # XXX Unmaintained!
-    "libsass ~= 0.23.0",
-    "pelican >= 4.8.0",
-    "pelican-myst-reader ~= 1.4.0",
-    "pelican-webassets ~= 2.0.0",
-    "pygments ~= 2.18.0",
-    "pynpm ~= 0.2.0",
-    "pyquery ~= 2.0.0",
+    "pelican >= 4.0",
+    "pelican-webassets",
+    "pillow",
+    "typogrify",
+    "bs4",
+    "pelican-neighbors",
 ]
 
 [tool.setuptools.package-data]
@@ -56,16 +58,13 @@ plumage = ["**"]
 # Exclude the locked JS dependencies file.
 plumage = ["package-lock.json"]
 
-[project.optional-dependencies]
-djlint = ["djlint ~= 1.35.2"]
-
 [project.urls]
-"Homepage" = 'https://github.com/kdeldycke/plumage'
-"Documentation" = 'https://github.com/kdeldycke/plumage#settings'
-"Repository" = 'https://github.com/kdeldycke/plumage'
-"Funding" = "https://github.com/sponsors/kdeldycke"
-"Issues" = "https://github.com/kdeldycke/plumage/issues"
-"Changelog" = "https://github.com/kdeldycke/plumage/blob/main/changelog.md"
+"Homepage" = 'https://github.com/mpaglia0/Iudas/tree/main'
+"Documentation" = 'https://github.com/mpaglia0/Iudas/tree/main/README.md'
+"Repository" = 'https://github.com/mpaglia0/Iudas/tree/main'
+"Funding" = "https://github.com/mpaglia0/Iudas/tree/main"
+"Issues" = "https://github.com/mpaglia0/Iudas/tree/main/issues"
+"Changelog" = "https://github.com/mpaglia0/Iudas/tree/main/CHANGELOG.md"
 
 [tool.mypy]
 warn_unused_configs = true
@@ -77,10 +76,10 @@ pretty = true
 
 [[tool.mypy.overrides]]
 ignore_missing_imports = true
-module = ["pyquery", "pynpm", "pelican.*"]
+module = ["pelican.*"]
 
 [tool.bumpversion]
-current_version = "5.0.0"
+current_version = "3.2"
 allow_dirty = true
 
 [[tool.bumpversion.files]]
@@ -93,9 +92,3 @@ ignore_missing_version = true
 filename = "./pyproject.toml"
 search = 'version = "{current_version}"'
 replace = 'version = "{new_version}"'
-
-[[tool.bumpversion.files]]
-# Update the version in standard Markdown changelog.
-filename = "./changelog.md"
-search = "## [{current_version} (unreleased)]("
-replace = "## [{new_version} (unreleased)]("
