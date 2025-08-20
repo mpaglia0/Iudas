@@ -1,0 +1,79 @@
+[project]
+name = "Iudas"
+version = "3.4"
+license = "GPL-3.0-or-later"
+requires-python = ">= 3.10"
+description = "A Pelican SSG blog theme focused on Privacy, Safety and Accessibility"
+authors = [{ name = "Maurizio Paglia", email = "maurizio@mauriziopaglia.it" }]
+readme = "README.md"
+keywords = [
+    "pelican",
+    "pelican-theme",
+    "lunr.js",
+    "static-search",
+    "theme",
+    "bootstrap",
+    "privacy",
+    "safety",
+    "accessible",
+    "accessibility",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Plugins",
+    "Environment :: Web Environment",
+    "Framework :: Pelican :: Themes",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Operating System :: OS Independent",
+    "Programming Language :: JavaScript",
+    "Programming Language :: Other",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Text Processing :: Markup :: HTML",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pelican >= 4.0",
+    "pelican-webassets",
+    "pillow",
+    "typogrify",
+    "bs4",
+    "pelican-neighbors",
+]
+
+[tool.setuptools.package-data]
+themes = ["**"]
+
+[project.urls]
+"Homepage" = "https://github.com/mpaglia0/Iudas/tree/main"
+"Documentation" = "https://github.com/mpaglia0/Iudas/tree/main/README.md"
+"Repository" = "https://github.com/mpaglia0/Iudas/tree/main"
+"Issues" = "https://github.com/mpaglia0/Iudas/tree/main/issues"
+"Changelog" = "https://github.com/mpaglia0/Iudas/tree/main/CHANGELOG.md"
+
+[tool.mypy]
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+pretty = true
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = ["pelican.*"]
+
+[tool.bumpversion]
+current_version = "3.4"
+allow_dirty = true
+
+[[tool.bumpversion.files]]
+filename = "./pyproject.toml"
+search = "version = "{current_version}""
+replace = "version = "{new_version}""

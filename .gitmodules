@@ -1,3 +1,6 @@
 [submodule "templates/cc-tools"]
 	path = templates/cc-tools
 	url = https://github.com/hlapp/cc-tools
+[submodule "plugins/webassets"]
+	path = plugins/webassets
+	url = https://github.com/pelican-plugins/webassets

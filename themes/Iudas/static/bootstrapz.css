@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'EasyReading';
   src: url('../Fonts/TTF/EasyReadingPRO.ttf') format(ttf),
-  url('../Fonts/TTF/EasyReadingPROItalic.ttf') format(ttf);
+       url('../Fonts/TTF/EasyReadingPROItalic.ttf') format(ttf);
 }
 
 :root {
