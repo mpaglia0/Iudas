@@ -17,6 +17,10 @@ on:
         description: "Dove pubblicare (pypi/testpypi)"
         required: true
         default: "pypi"
+      bump:
+        description: "Aggiorna versione (patch/minor/major)"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -36,7 +40,12 @@ jobs:
       - name: Install build tools
         run: |
           python -m pip install --upgrade pip
-          pip install build
+          pip install build bump2version
+
+      - name: Bump version (optional)
+        if: ${{ github.event.inputs.bump != '' }}
+        run: |
+          bump2version ${{ github.event.inputs.bump }}
 
       - name: Build distributions
         run: python -m build
