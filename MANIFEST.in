@@ -1,2 +1,2 @@
 recursive-include themes *
-include README.md LICENSE CHANGELOG.md
+include README.md LICENSE CHANGELOG.md CONTRIBUTING.md
