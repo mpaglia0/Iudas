@@ -1,7 +1,7 @@
 [project]
 name = "iudas"
 version = "3.4.0"
-license = {"GPL-3.0-or-later"}
+license = "GPL-3.0-or-later"
 requires-python = ">=3.10"
 description = "A Pelican SSG blog theme focused on Privacy, Safety and Accessibility"
 authors = [{ name = "Maurizio Paglia", email = "maurizio@mauriziopaglia.it" }]
