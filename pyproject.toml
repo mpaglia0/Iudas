@@ -1,7 +1,7 @@
 [project]
-name = "Iudas"
+name = "iudas"
 version = "3.4"
-license = "GPL-3.0-or-later"
+license = { text = "GPL-3.0-or-later" }
 requires-python = ">= 3.10"
 description = "A Pelican SSG blog theme focused on Privacy, Safety and Accessibility"
 authors = [{ name = "Maurizio Paglia", email = "maurizio@mauriziopaglia.it" }]
@@ -47,9 +47,6 @@ dependencies = [
     "pelican-neighbors",
 ]
 
-[tool.setuptools.package-data]
-themes = ["**"]
-
 [project.urls]
 "Homepage" = "https://github.com/mpaglia0/Iudas/tree/main"
 "Documentation" = "https://github.com/mpaglia0/Iudas/tree/main/README.md"
@@ -77,3 +74,7 @@ allow_dirty = true
 filename = "./pyproject.toml"
 search = "version = "{current_version}""
 replace = "version = "{new_version}""
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
